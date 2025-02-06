@@ -1,0 +1,646 @@
+{
+ "etype": "DataError",
+ "evalue": "DataError(1265, \"Data truncated for column 'incentive' at row 2\")",
+ "exception": {
+  "args": [
+   40,
+   49,
+   50,
+   54,
+   53,
+   44,
+   32,
+   34,
+   68,
+   97,
+   116,
+   97,
+   32,
+   116,
+   114,
+   117,
+   110,
+   99,
+   97,
+   116,
+   101,
+   100,
+   32,
+   102,
+   111,
+   114,
+   32,
+   99,
+   111,
+   108,
+   117,
+   109,
+   110,
+   32,
+   39,
+   105,
+   110,
+   99,
+   101,
+   110,
+   116,
+   105,
+   118,
+   101,
+   39,
+   32,
+   97,
+   116,
+   32,
+   114,
+   111,
+   119,
+   32,
+   50,
+   34,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   68,
+   97,
+   116,
+   97,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://27.100.38.20:8005/api/method/frappe.desk.form.save.savedocs' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "95": "",
+    "96": "\t\telif request.path.startswith(\"/api/\"):",
+    "97": "\t\t\tresponse = frappe.api.handle()",
+    "98": "",
+    "99": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 97
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/erp-demo-co...tore/erpnext-demo/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.desk.form.save.savedocs'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "46": "",
+    "47": "\tif cmd != \"login\":",
+    "48": "\t\tdata = execute_cmd(cmd)",
+    "49": "",
+    "50": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 48
+  },
+  {
+   "call": "(cmd='frappe.desk.form.save.savedocs', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'doc': '{\"name\":\"Team Billing\",\"creation\":\"2025... 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "method": "<function savedocs>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "84": "\t\tis_valid_http_method(method)",
+    "85": "",
+    "86": "\treturn frappe.call(method, **frappe.form_dict)",
+    "87": "",
+    "88": ""
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(fn=<function savedocs>, *args=(), **kwargs={'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs', 'doc': '{\"name\":\"Team Billing\",\"creation\":\"2025-01-28 18...ync_on\":\"2025-01-31T05:32:21.029Z\",\"__unsaved\":1}'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function savedocs>",
+    "newargs": "{'action': 'Save', 'doc': '{\"name\":\"Team Billing\",\"creation\":\"2025-01-28 18...ync_on\":\"2025-01-31T05:32:21.029Z\",\"__unsaved\":1}'}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "(doc=<DocType: Team Billing>, action='Save')",
+   "dump": {
+    "doc": "<DocType: Team Billing>",
+    "doc. save": "<bound method Document.save of <DocType: Team Billing>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/form/save.py",
+   "func": "savedocs",
+   "lines": {
+    "29": "\t}[action]",
+    "30": "",
+    "31": "\tdoc.save()",
+    "32": "",
+    "33": "\t# update recent documents"
+   },
+   "lnum": 31
+  },
+  {
+   "call": "(self=<DocType: Team Billing>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "self": "<DocType: Team Billing>",
+    "self. _save": "<bound method Document._save of <DocType: Team Billing>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "save",
+   "lines": {
+    "308": "\tdef save(self, *args, **kwargs):",
+    "309": "\t\t\"\"\"Wrapper for _save\"\"\"",
+    "310": "\t\treturn self._save(*args, **kwargs)",
+    "311": "",
+    "312": "\tdef _save(self, ignore_permissions=None, ignore_version=None) -> \"Document\":"
+   },
+   "lnum": 310
+  },
+  {
+   "call": "(self=<DocType: Team Billing>, ignore_permissions=None, ignore_version=None)",
+   "dump": {
+    "self": "<DocType: Team Billing>",
+    "self. run_post_save_methods": "<bound method Document.run_post_save_methods of <DocType: Team Billing>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "_save",
+   "lines": {
+    "360": "",
+    "361": "\t\tself.update_children()",
+    "362": "\t\tself.run_post_save_methods()",
+    "363": "",
+    "364": "\t\t# clear unsaved flag"
+   },
+   "lnum": 362
+  },
+  {
+   "call": "(self=<DocType: Team Billing>)",
+   "dump": {
+    "self": "<DocType: Team Billing>",
+    "self. run_method": "<bound method Document.run_method of <DocType: Team Billing>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "run_post_save_methods",
+   "lines": {
+    "1096": "",
+    "1097": "\t\tif self._action == \"save\":",
+    "1098": "\t\t\tself.run_method(\"on_update\")",
+    "1099": "\t\telif self._action == \"submit\":",
+    "1100": "\t\t\tself.run_method(\"on_update\")"
+   },
+   "lnum": 1098
+  },
+  {
+   "call": "(self=<DocType: Team Billing>, method='on_update', *args=(), **kwargs={})",
+   "dump": {
+    "Document. hook": "<function Document.hook>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "global Document": "<class 'frappe.model.document.Document'>",
+    "kwargs": "{}",
+    "out": "undefined",
+    "self": "<DocType: Team Billing>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "run_method",
+   "lines": {
+    "929": "",
+    "930": "\t\tfn.__name__ = str(method)",
+    "931": "\t\tout = Document.hook(fn)(self, *args, **kwargs)",
+    "932": "",
+    "933": "\t\tself.run_notifications(method)"
+   },
+   "lnum": 931
+  },
+  {
+   "call": "(self=<DocType: Team Billing>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "composed": "<function Document.hook.<locals>.compose.<locals>.runner>",
+    "kwargs": "{}",
+    "method": "'on_update'",
+    "self": "<DocType: Team Billing>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "composer",
+   "lines": {
+    "1281": "",
+    "1282": "\t\t\tcomposed = compose(f, *hooks)",
+    "1283": "\t\t\treturn composed(self, method, *args, **kwargs)",
+    "1284": "",
+    "1285": "\t\treturn composer"
+   },
+   "lnum": 1283
+  },
+  {
+   "call": "(self=<DocType: Team Billing>, method='on_update', *args=(), **kwargs={})",
+   "dump": {
+    "add_to_return_value": "<function Document.hook.<locals>.add_to_return_value>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "kwargs": "{}",
+    "self": "<DocType: Team Billing>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "runner",
+   "lines": {
+    "1263": "\t\tdef compose(fn, *hooks):",
+    "1264": "\t\t\tdef runner(self, method, *args, **kwargs):",
+    "1265": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))",
+    "1266": "\t\t\t\tfor f in hooks:",
+    "1267": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   },
+   "lnum": 1265
+  },
+  {
+   "call": "(self=<DocType: Team Billing>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "method_object": "<bound method DocType.on_update of <DocType: Team Billing>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "fn",
+   "lines": {
+    "926": "\t\t\t# If method found in __dict__, expect it to be callable",
+    "927": "\t\t\tif method in self.__dict__ or callable(method_object):",
+    "928": "\t\t\t\treturn method_object(*args, **kwargs)",
+    "929": "",
+    "930": "\t\tfn.__name__ = str(method)"
+   },
+   "lnum": 928
+  },
+  {
+   "call": "(self=<DocType: Team Billing>)",
+   "dump": {
+    "e": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/doctype/doctype.py",
+   "func": "on_update",
+   "lines": {
+    "389": "\t\texcept Exception as e:",
+    "390": "\t\t\tprint(f\"\\n\\nThere was an issue while migrating the DocType: {self.name}\\n\")",
+    "391": "\t\t\traise e",
+    "392": "",
+    "393": "\t\tself.change_modified_of_parent()"
+   },
+   "lnum": 391
+  },
+  {
+   "call": "(self=<DocType: Team Billing>)",
+   "dump": {
+    "frappe. db": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "frappe.db. updatedb": "<bound method MariaDBDatabase.updatedb of <frappe.database.mariadb.database.MariaDBDatabase object>>",
+    "global Meta": "<class 'frappe.model.meta.Meta'>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "self": "<DocType: Team Billing>",
+    "self. name": "'Team Billing'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/doctype/doctype.py",
+   "func": "on_update",
+   "lines": {
+    "386": "",
+    "387": "\t\ttry:",
+    "388": "\t\t\tfrappe.db.updatedb(self.name, Meta(self))",
+    "389": "\t\texcept Exception as e:",
+    "390": "\t\t\tprint(f\"\\n\\nThere was an issue while migrating the DocType: {self.name}\\n\")"
+   },
+   "lnum": 388
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.database.MariaDBDatabase object>, doctype='Team Billing', meta=<Meta: Team Billing>)",
+   "dump": {
+    "db_table": "<frappe.database.mariadb.schema.MariaDBTable object>",
+    "db_table. sync": "<bound method DBTable.sync of <frappe.database.mariadb.schema.MariaDBTable object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/mariadb/database.py",
+   "func": "updatedb",
+   "lines": {
+    "421": "\t\t\tdb_table.validate()",
+    "422": "",
+    "423": "\t\t\tdb_table.sync()",
+    "424": "\t\t\tself.commit()",
+    "425": ""
+   },
+   "lnum": 423
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.schema.MariaDBTable object>)",
+   "dump": {
+    "self": "<frappe.database.mariadb.schema.MariaDBTable object>",
+    "self. alter": "<bound method MariaDBTable.alter of <frappe.database.mariadb.schema.MariaDBTable object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/schema.py",
+   "func": "sync",
+   "lines": {
+    "42": "\t\telse:",
+    "43": "\t\t\tfrappe.cache().hdel(\"table_columns\", self.table_name)",
+    "44": "\t\t\tself.alter()",
+    "45": "",
+    "46": "\tdef create(self):"
+   },
+   "lnum": 44
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.schema.MariaDBTable object>)",
+   "dump": {
+    "frappe. db": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "frappe.db. sql_ddl": "<bound method Database.sql_ddl of <frappe.database.mariadb.database.MariaDBDatabase object>>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "query": "'ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/mariadb/schema.py",
+   "func": "alter",
+   "lines": {
+    "116": "\t\t\t\t\tquery_body = \", \".join(query_parts)",
+    "117": "\t\t\t\t\tquery = f\"ALTER TABLE `{self.table_name}` {query_body}\"",
+    "118": "\t\t\t\t\tfrappe.db.sql_ddl(query)",
+    "119": "",
+    "120": "\t\texcept Exception as e:"
+   },
+   "lnum": 118
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.database.MariaDBDatabase object>, query='ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0', debug=False)",
+   "dump": {
+    "debug": "False",
+    "query": "'ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0'",
+    "self": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "self. sql": "<bound method Database.sql of <frappe.database.mariadb.database.MariaDBDatabase object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/database.py",
+   "func": "sql_ddl",
+   "lines": {
+    "429": "\t\tautocommit in MariaDB.\"\"\"",
+    "430": "\t\tself.commit()",
+    "431": "\t\tself.sql(query, debug=debug)",
+    "432": "",
+    "433": "\tdef check_transaction_status(self, query):"
+   },
+   "lnum": 431
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.database.MariaDBDatabase object>, query='ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0', values=None, as_dict=0, as_list=0, formatted=0, debug=False, ignore_ddl=0, as_utf8=0, auto_commit=0, update=None, explain=False, run=True, pluck=False, as_iterator=False)",
+   "dump": {
+    "query": "'ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0'",
+    "self": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "self. _cursor": "<pymysql.cursors.Cursor object>",
+    "self._cursor. execute": "<bound method Cursor.execute of <pymysql.cursors.Cursor object>>",
+    "values": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/database.py",
+   "func": "sql",
+   "lines": {
+    "242": "",
+    "243": "\t\ttry:",
+    "244": "\t\t\tself._cursor.execute(query, values)",
+    "245": "\t\texcept Exception as e:",
+    "246": "\t\t\tif self.is_syntax_error(e):"
+   },
+   "lnum": 244
+  },
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, query='ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0', args=None)",
+   "dump": {
+    "query": "'ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0'",
+    "result": "undefined",
+    "self": "<pymysql.cursors.Cursor object>",
+    "self. _query": "<bound method Cursor._query of <pymysql.cursors.Cursor object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/cursors.py",
+   "func": "execute",
+   "lines": {
+    "151": "        query = self.mogrify(query, args)",
+    "152": "",
+    "153": "        result = self._query(query)",
+    "154": "        self._executed = query",
+    "155": "        return result"
+   },
+   "lnum": 153
+  },
+  {
+   "call": "(self=<pymysql.cursors.Cursor object>, q='ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0')",
+   "dump": {
+    "conn": "<pymysql.connections.Connection object>",
+    "conn. query": "<bound method Connection.query of <pymysql.connections.Connection object>>",
+    "q": "'ALTER TABLE `tabTeam Billing` MODIFY `incentive`... `credit_amount` decimal(21,9) not null default 0'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/cursors.py",
+   "func": "_query",
+   "lines": {
+    "320": "        conn = self._get_db()",
+    "321": "        self._clear_result()",
+    "322": "        conn.query(q)",
+    "323": "        self._do_get_result()",
+    "324": "        return self.rowcount"
+   },
+   "lnum": 322
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, sql=b'ALTER TABLE `tabTeam Billing` MODIFY `incentiv...`credit_amount` decimal(21,9) not null default 0', unbuffered=False)",
+   "dump": {
+    "self": "<pymysql.connections.Connection object>",
+    "self. _affected_rows": "0",
+    "self. _read_query_result": "<bound method Connection._read_query_result of <pymysql.connections.Connection object>>",
+    "unbuffered": "False"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "query",
+   "lines": {
+    "561": "            sql = sql.encode(self.encoding, \"surrogateescape\")",
+    "562": "        self._execute_command(COMMAND.COM_QUERY, sql)",
+    "563": "        self._affected_rows = self._read_query_result(unbuffered=unbuffered)",
+    "564": "        return self._affected_rows",
+    "565": ""
+   },
+   "lnum": 563
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, unbuffered=False)",
+   "dump": {
+    "result": "<pymysql.connections.MySQLResult object>",
+    "result. read": "<bound method MySQLResult.read of <pymysql.connections.MySQLResult object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "_read_query_result",
+   "lines": {
+    "823": "        else:",
+    "824": "            result = MySQLResult(self)",
+    "825": "            result.read()",
+    "826": "        self._result = result",
+    "827": "        if result.server_status is not None:"
+   },
+   "lnum": 825
+  },
+  {
+   "call": "(self=<pymysql.connections.MySQLResult object>)",
+   "dump": {
+    "first_packet": "undefined",
+    "self": "<pymysql.connections.MySQLResult object>",
+    "self. connection": "None",
+    "self.connection._read_packet": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "read",
+   "lines": {
+    "1197": "    def read(self):",
+    "1198": "        try:",
+    "1199": "            first_packet = self.connection._read_packet()",
+    "1200": "",
+    "1201": "            if first_packet.is_ok_packet():"
+   },
+   "lnum": 1199
+  },
+  {
+   "call": "(self=<pymysql.connections.Connection object>, packet_type=<class 'pymysql.protocol.MysqlPacket'>)",
+   "dump": {
+    "packet": "<pymysql.protocol.MysqlPacket object>",
+    "packet. raise_for_error": "<bound method MysqlPacket.raise_for_error of <pymysql.protocol.MysqlPacket object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py",
+   "func": "_read_packet",
+   "lines": {
+    "773": "            if self._result is not None and self._result.unbuffered_active is True:",
+    "774": "                self._result.unbuffered_active = False",
+    "775": "            packet.raise_for_error()",
+    "776": "        return packet",
+    "777": ""
+   },
+   "lnum": 775
+  },
+  {
+   "call": "(self=<pymysql.protocol.MysqlPacket object>)",
+   "dump": {
+    "err. raise_mysql_exception": "<function raise_mysql_exception>",
+    "global err": "<module 'pymysql.err' from '/home/erp-demo-coimb...env/lib/python3.10/site-packages/pymysql/err.py'>",
+    "self": "<pymysql.protocol.MysqlPacket object>",
+    "self. _data": "b\"\\xff\\xf1\\x04#01000Data truncated for column 'incentive' at row 2\""
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/protocol.py",
+   "func": "raise_for_error",
+   "lines": {
+    "217": "        if DEBUG:",
+    "218": "            print(\"errno =\", errno)",
+    "219": "        err.raise_mysql_exception(self._data)",
+    "220": "",
+    "221": "    def dump(self):"
+   },
+   "lnum": 219
+  },
+  {
+   "call": "(data=b\"\\xff\\xf1\\x04#01000Data truncated for column 'incentive' at row 2\")",
+   "dump": {
+    "errno": "1265",
+    "errorclass": "<class 'pymysql.err.DataError'>",
+    "errval": "\"Data truncated for column 'incentive' at row 2\""
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/err.py",
+   "func": "raise_mysql_exception",
+   "lines": {
+    "146": "        errval = data[3:].decode(\"utf-8\", \"replace\")",
+    "147": "    errorclass = error_map.get(errno)",
+    "148": "    if errorclass is None:",
+    "149": "        errorclass = InternalError if errno < 1000 else OperationalError",
+    "150": "    raise errorclass(errno, errval)"
+   },
+   "lnum": 150
+  }
+ ],
+ "locals": {
+  "data": "b\"\\xff\\xf1\\x04#01000Data truncated for column 'incentive' at row 2\"",
+  "errno": "1265",
+  "errorclass": "<class 'pymysql.err.DataError'>",
+  "errval": "Data truncated for column 'incentive' at row 2"
+ },
+ "pyver": "Python 3.10.16: /home/erp-demo-coimbatore/erpnext-demo/env/bin/python (prefix: /home/erp-demo-coimbatore/erpnext-demo/env)",
+ "timestamp": "2025-01-31 06:32:31.915181",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py\", line 97, in application\n    response = frappe.api.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 48, in handle\n    data = execute_cmd(cmd)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 86, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/form/save.py\", line 31, in savedocs\n    doc.save()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 310, in save\n    return self._save(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 362, in _save\n    self.run_post_save_methods()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1098, in run_post_save_methods\n    self.run_method(\"on_update\")\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 931, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1283, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1265, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 928, in fn\n    return method_object(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/doctype/doctype.py\", line 391, in on_update\n    raise e\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/doctype/doctype.py\", line 388, in on_update\n    frappe.db.updatedb(self.name, Meta(self))\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/mariadb/database.py\", line 423, in updatedb\n    db_table.sync()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/schema.py\", line 44, in sync\n    self.alter()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/mariadb/schema.py\", line 118, in alter\n    frappe.db.sql_ddl(query)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/database.py\", line 431, in sql_ddl\n    self.sql(query, debug=debug)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/database.py\", line 244, in sql\n    self._cursor.execute(query, values)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/cursors.py\", line 153, in execute\n    result = self._query(query)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/cursors.py\", line 322, in _query\n    conn.query(q)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py\", line 563, in query\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py\", line 825, in _read_query_result\n    result.read()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py\", line 1199, in read\n    first_packet = self.connection._read_packet()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/connections.py\", line 775, in _read_packet\n    packet.raise_for_error()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/protocol.py\", line 219, in raise_for_error\n    err.raise_mysql_exception(self._data)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/pymysql/err.py\", line 150, in raise_mysql_exception\n    raise errorclass(errno, errval)\npymysql.err.DataError: (1265, \"Data truncated for column 'incentive' at row 2\")\n"
+}

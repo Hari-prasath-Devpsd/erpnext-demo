@@ -1,0 +1,708 @@
+{
+ "etype": "RetryError",
+ "evalue": "RetryError(<Future at 0x7fea70a1cbe0 state=finished raised ConnectionError>)",
+ "exception": {
+  "args": [
+   40,
+   60,
+   70,
+   117,
+   116,
+   117,
+   114,
+   101,
+   32,
+   97,
+   116,
+   32,
+   48,
+   120,
+   55,
+   102,
+   101,
+   97,
+   55,
+   48,
+   97,
+   49,
+   99,
+   98,
+   101,
+   48,
+   32,
+   115,
+   116,
+   97,
+   116,
+   101,
+   61,
+   102,
+   105,
+   110,
+   105,
+   115,
+   104,
+   101,
+   100,
+   32,
+   114,
+   97,
+   105,
+   115,
+   101,
+   100,
+   32,
+   67,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   111,
+   110,
+   69,
+   114,
+   114,
+   111,
+   114,
+   62,
+   44,
+   41
+  ],
+  "last_attempt": [
+   60,
+   70,
+   117,
+   116,
+   117,
+   114,
+   101,
+   32,
+   97,
+   116,
+   32,
+   48,
+   120,
+   55,
+   102,
+   101,
+   97,
+   55,
+   48,
+   97,
+   49,
+   99,
+   98,
+   101,
+   48,
+   32,
+   115,
+   116,
+   97,
+   116,
+   101,
+   61,
+   102,
+   105,
+   110,
+   105,
+   115,
+   104,
+   101,
+   100,
+   32,
+   114,
+   97,
+   105,
+   115,
+   101,
+   100,
+   32,
+   67,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   111,
+   110,
+   69,
+   114,
+   114,
+   111,
+   114,
+   62
+  ],
+  "reraise": [
+   60,
+   98,
+   111,
+   117,
+   110,
+   100,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   82,
+   101,
+   116,
+   114,
+   121,
+   69,
+   114,
+   114,
+   111,
+   114,
+   46,
+   114,
+   101,
+   114,
+   97,
+   105,
+   115,
+   101,
+   32,
+   111,
+   102,
+   32,
+   82,
+   101,
+   116,
+   114,
+   121,
+   69,
+   114,
+   114,
+   111,
+   114,
+   40,
+   60,
+   46,
+   46,
+   46,
+   55,
+   48,
+   97,
+   49,
+   99,
+   98,
+   101,
+   48,
+   32,
+   115,
+   116,
+   97,
+   116,
+   101,
+   61,
+   102,
+   105,
+   110,
+   105,
+   115,
+   104,
+   101,
+   100,
+   32,
+   114,
+   97,
+   105,
+   115,
+   101,
+   100,
+   32,
+   67,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   111,
+   110,
+   69,
+   114,
+   114,
+   111,
+   114,
+   62,
+   41,
+   62
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   82,
+   101,
+   116,
+   114,
+   121,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://27.100.38.20:8005/api/method/frappe.desk.form.save.savedocs' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "95": "",
+    "96": "\t\telif request.path.startswith(\"/api/\"):",
+    "97": "\t\t\tresponse = frappe.api.handle()",
+    "98": "",
+    "99": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 97
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/erp-demo-co...tore/erpnext-demo/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.desk.form.save.savedocs'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "46": "",
+    "47": "\tif cmd != \"login\":",
+    "48": "\t\tdata = execute_cmd(cmd)",
+    "49": "",
+    "50": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 48
+  },
+  {
+   "call": "(cmd='frappe.desk.form.save.savedocs', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'doc': '{\"docstatus\":0,\"doctype\":\"User\",\"name\":... 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "method": "<function savedocs>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "84": "\t\tis_valid_http_method(method)",
+    "85": "",
+    "86": "\treturn frappe.call(method, **frappe.form_dict)",
+    "87": "",
+    "88": ""
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(fn=<function savedocs>, *args=(), **kwargs={'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs', 'doc': '{\"docstatus\":0,\"doctype\":\"User\",\"name\":\"new-user...m\",\"username\":\"demouser\",\"first_name\":\"demouser\"}'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function savedocs>",
+    "newargs": "{'action': 'Save', 'doc': '{\"docstatus\":0,\"doctype\":\"User\",\"name\":\"new-user...m\",\"username\":\"demouser\",\"first_name\":\"demouser\"}'}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "(doc=<User: demouser@gmail.com>, action='Save')",
+   "dump": {
+    "doc": "<User: demouser@gmail.com>",
+    "doc. save": "<bound method Document.save of <User: demouser@gmail.com>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/form/save.py",
+   "func": "savedocs",
+   "lines": {
+    "29": "\t}[action]",
+    "30": "",
+    "31": "\tdoc.save()",
+    "32": "",
+    "33": "\t# update recent documents"
+   },
+   "lnum": 31
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "self": "<User: demouser@gmail.com>",
+    "self. _save": "<bound method Document._save of <User: demouser@gmail.com>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "save",
+   "lines": {
+    "308": "\tdef save(self, *args, **kwargs):",
+    "309": "\t\t\"\"\"Wrapper for _save\"\"\"",
+    "310": "\t\treturn self._save(*args, **kwargs)",
+    "311": "",
+    "312": "\tdef _save(self, ignore_permissions=None, ignore_version=None) -> \"Document\":"
+   },
+   "lnum": 310
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>, ignore_permissions=None, ignore_version=None)",
+   "dump": {
+    "self": "<User: demouser@gmail.com>",
+    "self. insert": "<bound method Document.insert of <User: demouser@gmail.com>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "_save",
+   "lines": {
+    "330": "",
+    "331": "\t\tif self.get(\"__islocal\") or not self.get(\"name\"):",
+    "332": "\t\t\treturn self.insert()",
+    "333": "",
+    "334": "\t\tself._set_defaults()"
+   },
+   "lnum": 332
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>, ignore_permissions=None, ignore_links=None, ignore_if_duplicate=False, ignore_mandatory=None, set_name=None, set_child_names=True)",
+   "dump": {
+    "self": "<User: demouser@gmail.com>",
+    "self. run_post_save_methods": "<bound method Document.run_post_save_methods of <User: demouser@gmail.com>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "insert",
+   "lines": {
+    "290": "\t\tself.flags.update_log_for_doc_creation = True",
+    "291": "\t\trelink_mismatched_files(self)",
+    "292": "\t\tself.run_post_save_methods()",
+    "293": "\t\tself.flags.in_insert = False",
+    "294": ""
+   },
+   "lnum": 292
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>)",
+   "dump": {
+    "self": "<User: demouser@gmail.com>",
+    "self. run_method": "<bound method Document.run_method of <User: demouser@gmail.com>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "run_post_save_methods",
+   "lines": {
+    "1096": "",
+    "1097": "\t\tif self._action == \"save\":",
+    "1098": "\t\t\tself.run_method(\"on_update\")",
+    "1099": "\t\telif self._action == \"submit\":",
+    "1100": "\t\t\tself.run_method(\"on_update\")"
+   },
+   "lnum": 1098
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>, method='on_update', *args=(), **kwargs={})",
+   "dump": {
+    "Document. hook": "<function Document.hook>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "global Document": "<class 'frappe.model.document.Document'>",
+    "kwargs": "{}",
+    "out": "undefined",
+    "self": "<User: demouser@gmail.com>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "run_method",
+   "lines": {
+    "929": "",
+    "930": "\t\tfn.__name__ = str(method)",
+    "931": "\t\tout = Document.hook(fn)(self, *args, **kwargs)",
+    "932": "",
+    "933": "\t\tself.run_notifications(method)"
+   },
+   "lnum": 931
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "composed": "<function Document.hook.<locals>.compose.<locals>.runner>",
+    "kwargs": "{}",
+    "method": "'on_update'",
+    "self": "<User: demouser@gmail.com>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "composer",
+   "lines": {
+    "1281": "",
+    "1282": "\t\t\tcomposed = compose(f, *hooks)",
+    "1283": "\t\t\treturn composed(self, method, *args, **kwargs)",
+    "1284": "",
+    "1285": "\t\treturn composer"
+   },
+   "lnum": 1283
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>, method='on_update', *args=(), **kwargs={})",
+   "dump": {
+    "add_to_return_value": "<function Document.hook.<locals>.add_to_return_value>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "kwargs": "{}",
+    "self": "<User: demouser@gmail.com>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "runner",
+   "lines": {
+    "1263": "\t\tdef compose(fn, *hooks):",
+    "1264": "\t\t\tdef runner(self, method, *args, **kwargs):",
+    "1265": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))",
+    "1266": "\t\t\t\tfor f in hooks:",
+    "1267": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   },
+   "lnum": 1265
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "method_object": "<bound method User.on_update of <User: demouser@gmail.com>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "fn",
+   "lines": {
+    "926": "\t\t\t# If method found in __dict__, expect it to be callable",
+    "927": "\t\t\tif method in self.__dict__ or callable(method_object):",
+    "928": "\t\t\t\treturn method_object(*args, **kwargs)",
+    "929": "",
+    "930": "\t\tfn.__name__ = str(method)"
+   },
+   "lnum": 928
+  },
+  {
+   "call": "(self=<User: demouser@gmail.com>)",
+   "dump": {
+    "enqueue_after_commit": "undefined",
+    "frappe. enqueue": "<function enqueue>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "ignore_mandatory": "undefined",
+    "now": "None",
+    "self": "<User: demouser@gmail.com>",
+    "user": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/user/user.py",
+   "func": "on_update",
+   "lines": {
+    "139": "\t\tnow = frappe.flags.in_test or frappe.flags.in_install",
+    "140": "\t\tself.send_password_notification(self.__new_password)",
+    "141": "\t\tfrappe.enqueue(",
+    "142": "\t\t\t\"frappe.core.doctype.user.user.create_contact\",",
+    "143": "\t\t\tuser=self,"
+   },
+   "lnum": 141
+  },
+  {
+   "call": "(*args=('frappe.core.doctype.user.user.create_contact',), **kwargs={'enqueue_after_commit': True, 'ignore_mandatory': True, 'now': None, 'user': <User: demouser@gmail.com>})",
+   "dump": {
+    "args": "('frappe.core.doctype.user.user.create_contact',)",
+    "frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "frappe. utils": "<module 'frappe.utils' from '/home/erp-demo-coim...pnext-demo/apps/frappe/frappe/utils/__init__.py'>",
+    "frappe.utils. background_jobs": "<module 'frappe.utils.background_jobs' from '/ho...emo/apps/frappe/frappe/utils/background_jobs.py'>",
+    "frappe.utils.background_jobs. enqueue": "<function enqueue>",
+    "kwargs": "{'enqueue_after_commit': True, 'ignore_mandatory': True, 'now': None, 'user': <User: demouser@gmail.com>}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "enqueue",
+   "lines": {
+    "2169": "\timport frappe.utils.background_jobs",
+    "2170": "",
+    "2171": "\treturn frappe.utils.background_jobs.enqueue(*args, **kwargs)",
+    "2172": "",
+    "2173": ""
+   },
+   "lnum": 2171
+  },
+  {
+   "call": "(method='frappe.core.doctype.user.user.create_contact', queue='default', timeout=None, event=None, is_async=True, job_name=None, now=None, enqueue_after_commit=True, at_front=False, job_id=None, **kwargs={'ignore_mandatory': True, 'user': <User: demouser@gmail.com>})",
+   "dump": {
+    "global get_queue": "<function get_queue>",
+    "is_async": "True",
+    "q": "undefined",
+    "queue": "'default'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/background_jobs.py",
+   "func": "enqueue",
+   "lines": {
+    "99": "",
+    "100": "\ttry:",
+    "101": "\t\tq = get_queue(queue, is_async=is_async)",
+    "102": "\texcept ConnectionError:",
+    "103": "\t\tif frappe.local.flags.in_migrate:"
+   },
+   "lnum": 101
+  },
+  {
+   "call": "(qtype='default', is_async=True)",
+   "dump": {
+    "connection": "undefined",
+    "global Queue": "<class 'rq.queue.Queue'>",
+    "global generate_qname": "<function generate_qname>",
+    "global get_redis_conn": "<function get_redis_conn>",
+    "is_async": "True",
+    "qtype": "'default'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/background_jobs.py",
+   "func": "get_queue",
+   "lines": {
+    "345": "\t\"\"\"Returns a Queue object tied to a redis connection\"\"\"",
+    "346": "\tvalidate_queue(qtype)",
+    "347": "\treturn Queue(generate_qname(qtype), connection=get_redis_conn(), is_async=is_async)",
+    "348": "",
+    "349": ""
+   },
+   "lnum": 347
+  },
+  {
+   "call": "(*args=(), **kw={})",
+   "dump": {
+    "args": "()",
+    "f": "<function get_redis_conn>",
+    "kw": "{}",
+    "self": "<Retrying object at 0x7fea79cff3a0 (stop=<tenaci...fter=<function after_nothing at 0x7fea7ada48b0>)>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/tenacity/__init__.py",
+   "func": "wrapped_f",
+   "lines": {
+    "322": "        @functools.wraps(f)",
+    "323": "        def wrapped_f(*args: t.Any, **kw: t.Any) -> t.Any:",
+    "324": "            return self(f, *args, **kw)",
+    "325": "",
+    "326": "        def retry_with(*args: t.Any, **kwargs: t.Any) -> WrappedFn:"
+   },
+   "lnum": 324
+  },
+  {
+   "call": "(self=<Retrying object at 0x7fea79cff3a0 (stop=<tenaci...fter=<function after_nothing at 0x7fea7ada48b0>)>, fn=<function get_redis_conn>, *args=(), **kwargs={})",
+   "dump": {
+    "do": "<tenacity.DoAttempt object>",
+    "retry_state": "<RetryCallState 140644888739456: attempt #10; sl...necting to 127.0.0.1:11000. Connection refused.)>",
+    "self": "<Retrying object at 0x7fea79cff3a0 (stop=<tenaci...fter=<function after_nothing at 0x7fea7ada48b0>)>",
+    "self. iter": "<bound method BaseRetrying.iter of <Retrying obj...ter=<function after_nothing at 0x7fea7ada48b0>)>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/tenacity/__init__.py",
+   "func": "__call__",
+   "lines": {
+    "402": "        retry_state = RetryCallState(retry_object=self, fn=fn, args=args, kwargs=kwargs)",
+    "403": "        while True:",
+    "404": "            do = self.iter(retry_state=retry_state)",
+    "405": "            if isinstance(do, DoAttempt):",
+    "406": "                try:"
+   },
+   "lnum": 404
+  },
+  {
+   "call": "(self=<Retrying object at 0x7fea79cff3a0 (stop=<tenaci...fter=<function after_nothing at 0x7fea7ada48b0>)>, retry_state=<RetryCallState 140644888739456: attempt #10; sl...necting to 127.0.0.1:11000. Connection refused.)>)",
+   "dump": {
+    "fut": "<Future at 0x7fea70a1cbe0 state=finished raised ConnectionError>",
+    "fut. exception": "<bound method Future.exception of <Future at 0x7fea70a1cbe0 state=finished raised ConnectionError>>",
+    "retry_exc": "RetryError(<Future at 0x7fea70a1cbe0 state=finished raised ConnectionError>)"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/tenacity/__init__.py",
+   "func": "iter",
+   "lines": {
+    "359": "            if self.reraise:",
+    "360": "                raise retry_exc.reraise()",
+    "361": "            raise retry_exc from fut.exception()",
+    "362": "",
+    "363": "        if self.wait:"
+   },
+   "lnum": 361
+  }
+ ],
+ "locals": {
+  "fut": "<Future at 0x7fea70a1cbe0 state=finished raised ConnectionError>",
+  "is_explicit_retry": "False",
+  "retry_exc": "RetryError(<Future at 0x7fea70a1cbe0 state=finished raised ConnectionError>)",
+  "retry_state": "<RetryCallState 140644888739456: attempt #10; sl...necting to 127.0.0.1:11000. Connection refused.)>",
+  "self": "<Retrying object at 0x7fea79cff3a0 (stop=<tenaci...fter=<function after_nothing at 0x7fea7ada48b0>)>"
+ },
+ "pyver": "Python 3.10.16: /home/erp-demo-coimbatore/erpnext-demo/env/bin/python (prefix: /home/erp-demo-coimbatore/erpnext-demo/env)",
+ "timestamp": "2025-01-28 07:23:47.804876",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 559, in connect\n    sock = self._connect()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 615, in _connect\n    raise err\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 603, in _connect\n    sock.connect(socket_address)\nConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/tenacity/__init__.py\", line 407, in __call__\n    result = fn(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/background_jobs.py\", line 388, in get_redis_conn\n    _redis_queue_conn = RedisQueue.get_connection()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/redis_queue.py\", line 39, in get_connection\n    conn.ping()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py\", line 1378, in ping\n    return self.execute_command('PING')\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py\", line 898, in execute_command\n    conn = self.connection or pool.get_connection(command_name, **options)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 1192, in get_connection\n    connection.connect()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 563, in connect\n    raise ConnectionError(self._error_message(e))\nredis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py\", line 97, in application\n    response = frappe.api.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 48, in handle\n    data = execute_cmd(cmd)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 86, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/form/save.py\", line 31, in savedocs\n    doc.save()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 310, in save\n    return self._save(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 332, in _save\n    return self.insert()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 292, in insert\n    self.run_post_save_methods()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1098, in run_post_save_methods\n    self.run_method(\"on_update\")\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 931, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1283, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1265, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 928, in fn\n    return method_object(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/user/user.py\", line 141, in on_update\n    frappe.enqueue(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 2171, in enqueue\n    return frappe.utils.background_jobs.enqueue(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/background_jobs.py\", line 101, in enqueue\n    q = get_queue(queue, is_async=is_async)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/background_jobs.py\", line 347, in get_queue\n    return Queue(generate_qname(qtype), connection=get_redis_conn(), is_async=is_async)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/tenacity/__init__.py\", line 324, in wrapped_f\n    return self(f, *args, **kw)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/tenacity/__init__.py\", line 404, in __call__\n    do = self.iter(retry_state=retry_state)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/tenacity/__init__.py\", line 361, in iter\n    raise retry_exc from fut.exception()\ntenacity.RetryError: RetryError[<Future at 0x7fea70a1cbe0 state=finished raised ConnectionError>]\n"
+}

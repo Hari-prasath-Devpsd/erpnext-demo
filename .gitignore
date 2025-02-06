@@ -1,0 +1,5 @@
+apps/erpnext/
+env/
+logs/
+nohup.out
+patches.txt

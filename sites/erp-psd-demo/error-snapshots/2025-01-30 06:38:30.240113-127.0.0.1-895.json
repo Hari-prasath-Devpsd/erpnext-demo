@@ -1,0 +1,349 @@
+{
+ "etype": "ProgrammingError",
+ "evalue": "ProgrammingError('DocType', 'doctype')",
+ "exception": {
+  "args": [
+   40,
+   39,
+   68,
+   111,
+   99,
+   84,
+   121,
+   112,
+   101,
+   39,
+   44,
+   32,
+   39,
+   100,
+   111,
+   99,
+   116,
+   121,
+   112,
+   101,
+   39,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   80,
+   114,
+   111,
+   103,
+   114,
+   97,
+   109,
+   109,
+   105,
+   110,
+   103,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://27.100.38.20:8005/api/method/frappe.desk.search.search_link' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "95": "",
+    "96": "\t\telif request.path.startswith(\"/api/\"):",
+    "97": "\t\t\tresponse = frappe.api.handle()",
+    "98": "",
+    "99": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 97
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/erp-demo-co...tore/erpnext-demo/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.desk.search.search_link'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "46": "",
+    "47": "\tif cmd != \"login\":",
+    "48": "\t\tdata = execute_cmd(cmd)",
+    "49": "",
+    "50": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 48
+  },
+  {
+   "call": "(cmd='frappe.desk.search.search_link', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'txt': '', 'doctype': 'doctype', 'reference_doctype': '', 'cmd': 'frappe.desk.search.search_link'}",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "method": "<function search_link>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "84": "\t\tis_valid_http_method(method)",
+    "85": "",
+    "86": "\treturn frappe.call(method, **frappe.form_dict)",
+    "87": "",
+    "88": ""
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(fn=<function search_link>, *args=(), **kwargs={'cmd': 'frappe.desk.search.search_link', 'doctype': 'doctype', 'reference_doctype': '', 'txt': ''})",
+   "dump": {
+    "args": "()",
+    "fn": "<function search_link>",
+    "newargs": "{'doctype': 'doctype', 'reference_doctype': '', 'txt': ''}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "(doctype='doctype', txt='', query=None, filters=None, page_length=20, searchfield=None, reference_doctype='', ignore_user_permissions=False)",
+   "dump": {
+    "doctype": "'doctype'",
+    "filters": "None",
+    "global search_widget": "<function search_widget>",
+    "ignore_user_permissions": "False",
+    "page_length": "20",
+    "query": "None",
+    "reference_doctype": "''",
+    "searchfield": "None",
+    "txt": "''",
+    "txt. strip": "<built-in method strip of str object>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/search.py",
+   "func": "search_link",
+   "lines": {
+    "35": "\tignore_user_permissions=False,",
+    "36": "):",
+    "37": "\tsearch_widget(",
+    "38": "\t\tdoctype,",
+    "39": "\t\ttxt.strip(),"
+   },
+   "lnum": 37
+  },
+  {
+   "call": "(doctype='doctype', txt='', query=None, searchfield='name', start=0, page_length=20, filters=[], filter_fields=None, as_dict=False, reference_doctype='', ignore_user_permissions=False)",
+   "dump": {
+    "as_dict": "False",
+    "as_list": "undefined",
+    "doctype": "'doctype'",
+    "fields": "['name', 'module']",
+    "filters": "[]",
+    "formatted_fields": "['`tabDocType`.`name`', '`tabDocType`.`module`']",
+    "frappe. get_list": "<function get_list>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "ignore_permissions": "0",
+    "limit_page_length": "undefined",
+    "limit_start": "undefined",
+    "meta": "<Meta: DocType>",
+    "meta. translated_doctype": "1",
+    "or_filters": "[]",
+    "order_by": "'`tabdoctype`.idx desc, `tabdoctype`.`modified` DESC'",
+    "page_length": "20",
+    "reference_doctype": "''",
+    "start": "0",
+    "strict": "undefined",
+    "values": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/search.py",
+   "func": "search_widget",
+   "lines": {
+    "214": "\t\t\t)",
+    "215": "",
+    "216": "\t\t\tvalues = frappe.get_list(",
+    "217": "\t\t\t\tdoctype,",
+    "218": "\t\t\t\tfilters=filters,"
+   },
+   "lnum": 216
+  },
+  {
+   "call": "(doctype='doctype', *args=(), **kwargs={'as_list': True, 'fields': ['`tabDocType`.`name`', '`tabDocType`.`module`'], 'filters': [], 'ignore_permissions': 0, 'limit_page_length': None, 'limit_start': 0, 'or_filters': [], 'order_by': '`tabdoctype`.idx desc, `tabdoctype`.`modified` DESC', 'reference_doctype': '', 'strict': False})",
+   "dump": {
+    ").execute": "undefined",
+    "args": "()",
+    "doctype": "'doctype'",
+    "frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "frappe. model": "<module 'frappe.model' from '/home/erp-demo-coim...pnext-demo/apps/frappe/frappe/model/__init__.py'>",
+    "frappe.model. db_query": "<module 'frappe.model.db_query' from '/home/erp-...pnext-demo/apps/frappe/frappe/model/db_query.py'>",
+    "frappe.model.db_query. DatabaseQuery": "<class 'frappe.model.db_query.DatabaseQuery'>",
+    "kwargs": "{'as_list': True, 'fields': ['`tabDocType`.`name`', '`tabDocType`.`module`'], 'filters': [], 'ignore_permissions': 0, 'limit_page_length': None, 'limit_start': 0, 'or_filters': [], 'order_by': '`tabdoctype`.idx desc, `tabdoctype`.`modified` DESC', 'reference_doctype': '', 'strict': False}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "get_list",
+   "lines": {
+    "1908": "\timport frappe.model.db_query",
+    "1909": "",
+    "1910": "\treturn frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)",
+    "1911": "",
+    "1912": ""
+   },
+   "lnum": 1910
+  },
+  {
+   "call": "(self=<frappe.model.db_query.DatabaseQuery object>, fields=['`tabDocType`.`name`', '`tabDocType`.`module`'], filters=[], or_filters=[], docstatus=None, group_by=None, order_by='`tabdoctype`.idx desc, `tabdoctype`.`modified` DESC', limit_start=0, limit_page_length=None, as_list=True, with_childnames=False, debug=False, ignore_permissions=0, user=None, with_comment_count=False, join='left join', distinct=False, start=None, page_length=None, limit=None, ignore_ifnull=False, save_user_settings=False, save_user_settings_fields=False, update=None, add_total_row=None, user_settings=None, reference_doctype='', run=True, strict=False, pluck=None, ignore_ddl=False, parent_doctype=None)",
+   "dump": {
+    "self": "<frappe.model.db_query.DatabaseQuery object>",
+    "self. get_table_columns": "<bound method DatabaseQuery.get_table_columns of <frappe.model.db_query.DatabaseQuery object>>",
+    "self.columns": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/db_query.py",
+   "func": "execute",
+   "lines": {
+    "183": "\t\t\treturn controller.get_list(kwargs)",
+    "184": "",
+    "185": "\t\tself.columns = self.get_table_columns()",
+    "186": "",
+    "187": "\t\t# no table & ignore_ddl, return"
+   },
+   "lnum": 185
+  },
+  {
+   "call": "(self=<frappe.model.db_query.DatabaseQuery object>)",
+   "dump": {
+    "global get_table_columns": "<function get_table_columns>",
+    "self": "<frappe.model.db_query.DatabaseQuery object>",
+    "self. doctype": "'doctype'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/db_query.py",
+   "func": "get_table_columns",
+   "lines": {
+    "546": "\tdef get_table_columns(self):",
+    "547": "\t\ttry:",
+    "548": "\t\t\treturn get_table_columns(self.doctype)",
+    "549": "\t\texcept frappe.db.TableMissingError:",
+    "550": "\t\t\tif self.ignore_ddl:"
+   },
+   "lnum": 548
+  },
+  {
+   "call": "(doctype='doctype')",
+   "dump": {
+    "doctype": "'doctype'",
+    "frappe. db": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "frappe.db. get_table_columns": "<bound method Database.get_table_columns of <fra...atabase.mariadb.database.MariaDBDatabase object>>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/meta.py",
+   "func": "get_table_columns",
+   "lines": {
+    "73": "",
+    "74": "def get_table_columns(doctype):",
+    "75": "\treturn frappe.db.get_table_columns(doctype)",
+    "76": "",
+    "77": ""
+   },
+   "lnum": 75
+  },
+  {
+   "call": "(self=<frappe.database.mariadb.database.MariaDBDatabase object>, doctype='doctype')",
+   "dump": {
+    "doctype": "'doctype'",
+    "self": "<frappe.database.mariadb.database.MariaDBDatabase object>",
+    "self. TableMissingError": "<class 'pymysql.err.ProgrammingError'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/database.py",
+   "func": "get_table_columns",
+   "lines": {
+    "1257": "\t\tcolumns = self.get_db_table_columns(\"tab\" + doctype)",
+    "1258": "\t\tif not columns:",
+    "1259": "\t\t\traise self.TableMissingError(\"DocType\", doctype)",
+    "1260": "\t\treturn columns",
+    "1261": ""
+   },
+   "lnum": 1259
+  }
+ ],
+ "locals": {
+  "columns": "[]",
+  "doctype": "doctype",
+  "self": "<frappe.database.mariadb.database.MariaDBDatabase object>"
+ },
+ "pyver": "Python 3.10.16: /home/erp-demo-coimbatore/erpnext-demo/env/bin/python (prefix: /home/erp-demo-coimbatore/erpnext-demo/env)",
+ "timestamp": "2025-01-30 06:38:30.240152",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py\", line 97, in application\n    response = frappe.api.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 48, in handle\n    data = execute_cmd(cmd)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 86, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/search.py\", line 37, in search_link\n    search_widget(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/search.py\", line 216, in search_widget\n    values = frappe.get_list(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1910, in get_list\n    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/db_query.py\", line 185, in execute\n    self.columns = self.get_table_columns()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/db_query.py\", line 548, in get_table_columns\n    return get_table_columns(self.doctype)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/meta.py\", line 75, in get_table_columns\n    return frappe.db.get_table_columns(doctype)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/database/database.py\", line 1259, in get_table_columns\n    raise self.TableMissingError(\"DocType\", doctype)\npymysql.err.ProgrammingError: ('DocType', 'doctype')\n"
+}

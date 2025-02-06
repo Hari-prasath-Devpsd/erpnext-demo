@@ -1,0 +1,10 @@
+{
+ "admin_password": "frappe",
+ "db_name": "_dcead54a2309c672",
+ "db_password": "LrSI0yswkyzmc2Sh",
+ "db_type": "mariadb",
+ "encryption_key": "<12345678901234567890123456789012>",
+ "maintenance_mode": 0,
+ "pause_scheduler": false,
+ "redis_password": "frappe"
+}

@@ -1,0 +1,437 @@
+{
+ "etype": "ConnectionError",
+ "evalue": "ConnectionError('Error 111 connecting to 127.0.0.1:11000. Connection refused.')",
+ "exception": {
+  "args": [
+   40,
+   39,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   49,
+   49,
+   49,
+   32,
+   99,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   110,
+   103,
+   32,
+   116,
+   111,
+   32,
+   49,
+   50,
+   55,
+   46,
+   48,
+   46,
+   48,
+   46,
+   49,
+   58,
+   49,
+   49,
+   48,
+   48,
+   48,
+   46,
+   32,
+   67,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   111,
+   110,
+   32,
+   114,
+   101,
+   102,
+   117,
+   115,
+   101,
+   100,
+   46,
+   39,
+   44,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   67,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   111,
+   110,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://27.100.38.20:8005/api/method/fr....doctype.workspace.workspace.update_page' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "95": "",
+    "96": "\t\telif request.path.startswith(\"/api/\"):",
+    "97": "\t\t\tresponse = frappe.api.handle()",
+    "98": "",
+    "99": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 97
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/erp-demo-co...tore/erpnext-demo/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.desk.doctype.workspace.workspace.update_page'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "46": "",
+    "47": "\tif cmd != \"login\":",
+    "48": "\t\tdata = execute_cmd(cmd)",
+    "49": "",
+    "50": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 48
+  },
+  {
+   "call": "(cmd='frappe.desk.doctype.workspace.workspace.update_page', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'name': 'Buying', 'title': 'Buying', 'icon': 'b...pe.desk.doctype.workspace.workspace.update_page'}",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "method": "<function update_page>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "84": "\t\tis_valid_http_method(method)",
+    "85": "",
+    "86": "\treturn frappe.call(method, **frappe.form_dict)",
+    "87": "",
+    "88": ""
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(fn=<function update_page>, *args=(), **kwargs={'cmd': 'frappe.desk.doctype.workspace.workspace.update_page', 'icon': 'buying', 'name': 'Buying', 'parent': '', 'public': '0', 'title': 'Buying'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function update_page>",
+    "newargs": "{'icon': 'buying', 'name': 'Buying', 'parent': '', 'public': '0', 'title': 'Buying'}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "(name='Buying', title='Buying', icon='buying', parent='', public=0)",
+   "dump": {
+    "force": "undefined",
+    "global rename_doc": "<function rename_doc>",
+    "ignore_permissions": "undefined",
+    "name": "'Buying'",
+    "new_name": "'Buying-user@gmail.com'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/doctype/workspace/workspace.py",
+   "func": "update_page",
+   "lines": {
+    "260": "",
+    "261": "\t\tif name != new_name:",
+    "262": "\t\t\trename_doc(\"Workspace\", name, new_name, force=True, ignore_permissions=True)",
+    "263": "",
+    "264": "\t\t# update new name and public in child pages"
+   },
+   "lnum": 262
+  },
+  {
+   "call": "(doctype='Workspace', old='Buying', new='Buying-user@gmail.com', force=True, merge=False, ignore_permissions=True, ignore_if_exists=False, show_alert=True, rebuild_search=True, doc=None, validate=True)",
+   "dump": {
+    "doctype": "'Workspace'",
+    "frappe. enqueue": "<function enqueue>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/rename_doc.py",
+   "func": "rename_doc",
+   "lines": {
+    "210": "\tfrappe.clear_cache()",
+    "211": "\tif rebuild_search:",
+    "212": "\t\tfrappe.enqueue(\"frappe.utils.global_search.rebuild_for_doctype\", doctype=doctype)",
+    "213": "",
+    "214": "\tif show_alert:"
+   },
+   "lnum": 212
+  },
+  {
+   "call": "(*args=('frappe.utils.global_search.rebuild_for_doctype',), **kwargs={'doctype': 'Workspace'})",
+   "dump": {
+    "args": "('frappe.utils.global_search.rebuild_for_doctype',)",
+    "frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "frappe. utils": "<module 'frappe.utils' from '/home/erp-demo-coim...pnext-demo/apps/frappe/frappe/utils/__init__.py'>",
+    "frappe.utils. background_jobs": "<module 'frappe.utils.background_jobs' from '/ho...emo/apps/frappe/frappe/utils/background_jobs.py'>",
+    "frappe.utils.background_jobs. enqueue": "<function enqueue>",
+    "kwargs": "{'doctype': 'Workspace'}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "enqueue",
+   "lines": {
+    "2169": "\timport frappe.utils.background_jobs",
+    "2170": "",
+    "2171": "\treturn frappe.utils.background_jobs.enqueue(*args, **kwargs)",
+    "2172": "",
+    "2173": ""
+   },
+   "lnum": 2171
+  },
+  {
+   "call": "(method='frappe.utils.global_search.rebuild_for_doctype', queue='default', timeout=300, event=None, is_async=True, job_name=None, now=False, enqueue_after_commit=False, at_front=False, job_id=None, **kwargs={'doctype': 'Workspace'})",
+   "dump": {
+    "at_front": "False",
+    "failure_ttl": "undefined",
+    "frappe. conf": "{'background_workers': 1, 'file_watcher_port': 6...567890123456789012>', 'redis_password': 'frappe'}",
+    "frappe.conf. get": "<built-in method get of _dict object>",
+    "global RQ_JOB_FAILURE_TTL": "604800",
+    "global RQ_RESULTS_TTL": "600",
+    "global execute_job": "<function execute_job>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "global truncate_failed_registry": "<function truncate_failed_registry>",
+    "job_id": "None",
+    "kwargs": "{'doctype': 'Workspace'}",
+    "on_failure": "undefined",
+    "q": "Queue('home-erp-demo-coimbatore-erpnext-demo:default')",
+    "q. enqueue_call": "<bound method Queue.enqueue_call of Queue('home-erp-demo-coimbatore-erpnext-demo:default')>",
+    "queue_args": "{'event': None, 'is_async': True, 'job_name': 'frappe.utils.global_search.rebuild_for_doctype', 'kwargs': {'doctype': 'Workspace'}, 'method': 'frappe.utils.global_search.rebuild_for_doctype', 'site': 'erp-psd-demo', 'user': 'user@gmail.com'}",
+    "result_ttl": "undefined",
+    "timeout": "300"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/background_jobs.py",
+   "func": "enqueue",
+   "lines": {
+    "135": "\t\treturn",
+    "136": "",
+    "137": "\treturn q.enqueue_call(",
+    "138": "\t\texecute_job,",
+    "139": "\t\ttimeout=timeout,"
+   },
+   "lnum": 137
+  },
+  {
+   "call": "(self=Queue('home-erp-demo-coimbatore-erpnext-demo:default'), func=<function execute_job>, args=None, kwargs={'event': None, 'is_async': True, 'job_name': 'frappe.utils.global_search.rebuild_for_doctype', 'kwargs': {'doctype': 'Workspace'}, 'method': 'frappe.utils.global_search.rebuild_for_doctype', 'site': 'erp-psd-demo', 'user': 'user@gmail.com'}, timeout=300, result_ttl=600, ttl=None, failure_ttl=604800, description=None, depends_on=None, job_id=None, at_front=False, meta=None, retry=None, on_success=None, on_failure=<function truncate_failed_registry>, pipeline=None)",
+   "dump": {
+    "at_front": "False",
+    "job": "Job('d8c31db1-13a9-4943-b5c8-4e490378d6c2', enqu...atetime.datetime(2025, 1, 28, 8, 45, 35, 291262))",
+    "pipeline": "None",
+    "self": "Queue('home-erp-demo-coimbatore-erpnext-demo:default')",
+    "self. enqueue_job": "<bound method Queue.enqueue_job of Queue('home-erp-demo-coimbatore-erpnext-demo:default')>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/rq/queue.py",
+   "func": "enqueue_call",
+   "lines": {
+    "685": "            on_failure=on_failure,",
+    "686": "        )",
+    "687": "        return self.enqueue_job(job, pipeline=pipeline, at_front=at_front)",
+    "688": "",
+    "689": "    @staticmethod"
+   },
+   "lnum": 687
+  },
+  {
+   "call": "(self=Queue('home-erp-demo-coimbatore-erpnext-demo:default'), job=Job('d8c31db1-13a9-4943-b5c8-4e490378d6c2', enqu...atetime.datetime(2025, 1, 28, 8, 45, 35, 291262)), pipeline=None, at_front=False)",
+   "dump": {
+    "at_front": "False",
+    "job": "Job('d8c31db1-13a9-4943-b5c8-4e490378d6c2', enqu...atetime.datetime(2025, 1, 28, 8, 45, 35, 291262))",
+    "pipeline": "None",
+    "self": "Queue('home-erp-demo-coimbatore-erpnext-demo:default')",
+    "self. _enqueue_job": "<bound method Queue._enqueue_job of Queue('home-erp-demo-coimbatore-erpnext-demo:default')>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/rq/queue.py",
+   "func": "enqueue_job",
+   "lines": {
+    "1011": "        # If we do not depend on an unfinished job, enqueue the job.",
+    "1012": "        if job.get_status(refresh=False) != JobStatus.DEFERRED:",
+    "1013": "            return self._enqueue_job(job, pipeline=pipeline, at_front=at_front)",
+    "1014": "        return job",
+    "1015": ""
+   },
+   "lnum": 1013
+  },
+  {
+   "call": "(self=Queue('home-erp-demo-coimbatore-erpnext-demo:default'), job=Job('d8c31db1-13a9-4943-b5c8-4e490378d6c2', enqu...atetime.datetime(2025, 1, 28, 8, 45, 35, 291262)), pipeline=None, at_front=False)",
+   "dump": {
+    "pipe": "Pipeline<ConnectionPool<Connection<host=127.0.0.1,port=11000,db=0>>>",
+    "pipe. execute": "<bound method Pipeline.execute of Pipeline<Conne...ool<Connection<host=127.0.0.1,port=11000,db=0>>>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/rq/queue.py",
+   "func": "_enqueue_job",
+   "lines": {
+    "1046": "",
+    "1047": "        if pipeline is None:",
+    "1048": "            pipe.execute()",
+    "1049": "",
+    "1050": "        if not self._is_async:"
+   },
+   "lnum": 1048
+  },
+  {
+   "call": "(self=Pipeline<ConnectionPool<Connection<host=127.0.0.1,port=11000,db=0>>>, raise_on_error=True)",
+   "dump": {
+    "conn": "None",
+    "self": "Pipeline<ConnectionPool<Connection<host=127.0.0.1,port=11000,db=0>>>",
+    "self. connection_pool": "ConnectionPool<Connection<host=127.0.0.1,port=11000,db=0>>",
+    "self. shard_hint": "None",
+    "self.connection_pool. get_connection": "<bound method ConnectionPool.get_connection of C...Pool<Connection<host=127.0.0.1,port=11000,db=0>>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py",
+   "func": "execute",
+   "lines": {
+    "4010": "        conn = self.connection",
+    "4011": "        if not conn:",
+    "4012": "            conn = self.connection_pool.get_connection('MULTI',",
+    "4013": "                                                       self.shard_hint)",
+    "4014": "            # assign to self.connection so reset() releases the connection"
+   },
+   "lnum": 4012
+  },
+  {
+   "call": "(self=ConnectionPool<Connection<host=127.0.0.1,port=11000,db=0>>, command_name='MULTI', *keys=(None,), **options={})",
+   "dump": {
+    "connection": "Connection<host=127.0.0.1,port=11000,db=0>",
+    "connection. connect": "<bound method Connection.connect of Connection<host=127.0.0.1,port=11000,db=0>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py",
+   "func": "get_connection",
+   "lines": {
+    "1200": "            except ConnectionError:",
+    "1201": "                connection.disconnect()",
+    "1202": "                connection.connect()",
+    "1203": "                if connection.can_read():",
+    "1204": "                    raise ConnectionError('Connection not ready')"
+   },
+   "lnum": 1202
+  },
+  {
+   "call": "(self=Connection<host=127.0.0.1,port=11000,db=0>)",
+   "dump": {
+    "e": "undefined",
+    "global ConnectionError": "<class 'redis.exceptions.ConnectionError'>",
+    "self": "Connection<host=127.0.0.1,port=11000,db=0>",
+    "self. _error_message": "<bound method Connection._error_message of Connection<host=127.0.0.1,port=11000,db=0>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py",
+   "func": "connect",
+   "lines": {
+    "561": "            raise TimeoutError(\"Timeout connecting to server\")",
+    "562": "        except socket.error as e:",
+    "563": "            raise ConnectionError(self._error_message(e))",
+    "564": "",
+    "565": "        self._sock = sock"
+   },
+   "lnum": 563
+  }
+ ],
+ "locals": {
+  "self": "Connection<host=127.0.0.1,port=11000,db=0>"
+ },
+ "pyver": "Python 3.10.16: /home/erp-demo-coimbatore/erpnext-demo/env/bin/python (prefix: /home/erp-demo-coimbatore/erpnext-demo/env)",
+ "timestamp": "2025-01-28 09:45:35.347941",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 1198, in get_connection\n    if connection.can_read():\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 734, in can_read\n    return self._parser.can_read(timeout)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 416, in can_read\n    return self.read_from_socket(timeout=timeout,\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 429, in read_from_socket\n    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)\nredis.exceptions.ConnectionError: Connection closed by server.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 559, in connect\n    sock = self._connect()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 615, in _connect\n    raise err\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 603, in _connect\n    sock.connect(socket_address)\nConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py\", line 97, in application\n    response = frappe.api.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 48, in handle\n    data = execute_cmd(cmd)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 86, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/doctype/workspace/workspace.py\", line 262, in update_page\n    rename_doc(\"Workspace\", name, new_name, force=True, ignore_permissions=True)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/rename_doc.py\", line 212, in rename_doc\n    frappe.enqueue(\"frappe.utils.global_search.rebuild_for_doctype\", doctype=doctype)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 2171, in enqueue\n    return frappe.utils.background_jobs.enqueue(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/background_jobs.py\", line 137, in enqueue\n    return q.enqueue_call(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/rq/queue.py\", line 687, in enqueue_call\n    return self.enqueue_job(job, pipeline=pipeline, at_front=at_front)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/rq/queue.py\", line 1013, in enqueue_job\n    return self._enqueue_job(job, pipeline=pipeline, at_front=at_front)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/rq/queue.py\", line 1048, in _enqueue_job\n    pipe.execute()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py\", line 4012, in execute\n    conn = self.connection_pool.get_connection('MULTI',\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 1202, in get_connection\n    connection.connect()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 563, in connect\n    raise ConnectionError(self._error_message(e))\nredis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:11000. Connection refused.\n"
+}

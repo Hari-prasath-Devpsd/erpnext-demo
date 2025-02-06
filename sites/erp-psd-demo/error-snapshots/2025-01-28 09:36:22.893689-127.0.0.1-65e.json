@@ -1,0 +1,405 @@
+{
+ "etype": "ConnectionError",
+ "evalue": "ConnectionError('Error 111 connecting to 127.0.0.1:13000. Connection refused.')",
+ "exception": {
+  "args": [
+   40,
+   39,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   49,
+   49,
+   49,
+   32,
+   99,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   110,
+   103,
+   32,
+   116,
+   111,
+   32,
+   49,
+   50,
+   55,
+   46,
+   48,
+   46,
+   48,
+   46,
+   49,
+   58,
+   49,
+   51,
+   48,
+   48,
+   48,
+   46,
+   32,
+   67,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   111,
+   110,
+   32,
+   114,
+   101,
+   102,
+   117,
+   115,
+   101,
+   100,
+   46,
+   39,
+   44,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   67,
+   111,
+   110,
+   110,
+   101,
+   99,
+   116,
+   105,
+   111,
+   110,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://27.100.38.20:8005/api/method/fr....doctype.workspace.workspace.update_page' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "95": "",
+    "96": "\t\telif request.path.startswith(\"/api/\"):",
+    "97": "\t\t\tresponse = frappe.api.handle()",
+    "98": "",
+    "99": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 97
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/erp-demo-co...tore/erpnext-demo/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.desk.doctype.workspace.workspace.update_page'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "46": "",
+    "47": "\tif cmd != \"login\":",
+    "48": "\t\tdata = execute_cmd(cmd)",
+    "49": "",
+    "50": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 48
+  },
+  {
+   "call": "(cmd='frappe.desk.doctype.workspace.workspace.update_page', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'name': 'Stock', 'title': 'Stock', 'icon': 'sto...pe.desk.doctype.workspace.workspace.update_page'}",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "method": "<function update_page>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "84": "\t\tis_valid_http_method(method)",
+    "85": "",
+    "86": "\treturn frappe.call(method, **frappe.form_dict)",
+    "87": "",
+    "88": ""
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(fn=<function update_page>, *args=(), **kwargs={'cmd': 'frappe.desk.doctype.workspace.workspace.update_page', 'icon': 'stock', 'name': 'Stock', 'parent': '', 'public': '0', 'title': 'Stock'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function update_page>",
+    "newargs": "{'icon': 'stock', 'name': 'Stock', 'parent': '', 'public': '0', 'title': 'Stock'}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "(name='Stock', title='Stock', icon='stock', parent='', public=0)",
+   "dump": {
+    "force": "undefined",
+    "global rename_doc": "<function rename_doc>",
+    "ignore_permissions": "undefined",
+    "name": "'Stock'",
+    "new_name": "'Stock-user@gmail.com'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/doctype/workspace/workspace.py",
+   "func": "update_page",
+   "lines": {
+    "260": "",
+    "261": "\t\tif name != new_name:",
+    "262": "\t\t\trename_doc(\"Workspace\", name, new_name, force=True, ignore_permissions=True)",
+    "263": "",
+    "264": "\t\t# update new name and public in child pages"
+   },
+   "lnum": 262
+  },
+  {
+   "call": "(doctype='Workspace', old='Stock', new='Stock-user@gmail.com', force=True, merge=False, ignore_permissions=True, ignore_if_exists=False, show_alert=True, rebuild_search=True, doc=None, validate=True)",
+   "dump": {
+    "global update_user_settings": "<function update_user_settings>",
+    "link_fields": "[{'parent': 'Form Tour', 'fieldname': 'workspace_name', 'issingle': 0}]",
+    "new": "'Stock-user@gmail.com'",
+    "old": "'Stock'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/rename_doc.py",
+   "func": "rename_doc",
+   "lines": {
+    "176": "",
+    "177": "\t# save the user settings in the db",
+    "178": "\tupdate_user_settings(old, new, link_fields)",
+    "179": "",
+    "180": "\tif doctype == \"DocType\":"
+   },
+   "lnum": 178
+  },
+  {
+   "call": "(old='Stock', new='Stock-user@gmail.com', link_fields=[{'parent': 'Form Tour', 'fieldname': 'workspace_name', 'issingle': 0}])",
+   "dump": {
+    "global sync_user_settings": "<function sync_user_settings>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/rename_doc.py",
+   "func": "update_user_settings",
+   "lines": {
+    "252": "",
+    "253": "\t# store the user settings data from the redis to db",
+    "254": "\tsync_user_settings()",
+    "255": "",
+    "256": "\tif not link_fields:"
+   },
+   "lnum": 254
+  },
+  {
+   "call": "()",
+   "dump": {
+    ").hgetall": "undefined",
+    "data": "undefined",
+    "frappe. cache": "<function cache>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "key": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/utils/user_settings.py",
+   "func": "sync_user_settings",
+   "lines": {
+    "47": "def sync_user_settings():",
+    "48": "\t\"\"\"Sync from cache to database (called asynchronously via the browser)\"\"\"",
+    "49": "\tfor key, data in frappe.cache().hgetall(\"_user_settings\").items():",
+    "50": "\t\tkey = safe_decode(key)",
+    "51": "\t\tdoctype, user = key.split(\"::\")  # WTF?"
+   },
+   "lnum": 49
+  },
+  {
+   "call": "(self=RedisWrapper<ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>>, name='_user_settings')",
+   "dump": {
+    ").hgetall": "undefined",
+    "builtin super": "<class 'super'>",
+    "name": "'_user_settings'",
+    "self": "RedisWrapper<ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>>",
+    "self. make_key": "<bound method RedisWrapper.make_key of RedisWrap...ool<Connection<host=127.0.0.1,port=13000,db=0>>>>",
+    "value": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/redis_wrapper.py",
+   "func": "hgetall",
+   "lines": {
+    "182": "",
+    "183": "\tdef hgetall(self, name):",
+    "184": "\t\tvalue = super().hgetall(self.make_key(name))",
+    "185": "\t\treturn {key: pickle.loads(value) for key, value in value.items()}",
+    "186": ""
+   },
+   "lnum": 184
+  },
+  {
+   "call": "(self=RedisWrapper<ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>>, name=b'_dcead54a2309c672|_user_settings')",
+   "dump": {
+    "name": "b'_dcead54a2309c672|_user_settings'",
+    "self": "RedisWrapper<ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>>",
+    "self. execute_command": "<bound method Redis.execute_command of RedisWrap...ool<Connection<host=127.0.0.1,port=13000,db=0>>>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py",
+   "func": "hgetall",
+   "lines": {
+    "3012": "    def hgetall(self, name):",
+    "3013": "        \"Return a Python dict of the hash's name/value pairs\"",
+    "3014": "        return self.execute_command('HGETALL', name)",
+    "3015": "",
+    "3016": "    def hincrby(self, name, key, amount=1):"
+   },
+   "lnum": 3014
+  },
+  {
+   "call": "(self=RedisWrapper<ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>>, *args=('HGETALL', b'_dcead54a2309c672|_user_settings'), **options={})",
+   "dump": {
+    "command_name": "'HGETALL'",
+    "conn": "undefined",
+    "options": "{}",
+    "pool": "ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>",
+    "pool. get_connection": "<bound method ConnectionPool.get_connection of C...Pool<Connection<host=127.0.0.1,port=13000,db=0>>>",
+    "self": "RedisWrapper<ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>>",
+    "self. connection": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py",
+   "func": "execute_command",
+   "lines": {
+    "896": "        pool = self.connection_pool",
+    "897": "        command_name = args[0]",
+    "898": "        conn = self.connection or pool.get_connection(command_name, **options)",
+    "899": "        try:",
+    "900": "            conn.send_command(*args)"
+   },
+   "lnum": 898
+  },
+  {
+   "call": "(self=ConnectionPool<Connection<host=127.0.0.1,port=13000,db=0>>, command_name='HGETALL', *keys=(), **options={})",
+   "dump": {
+    "connection": "Connection<host=127.0.0.1,port=13000,db=0>",
+    "connection. connect": "<bound method Connection.connect of Connection<host=127.0.0.1,port=13000,db=0>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py",
+   "func": "get_connection",
+   "lines": {
+    "1190": "        try:",
+    "1191": "            # ensure this connection is connected to Redis",
+    "1192": "            connection.connect()",
+    "1193": "            # connections that the pool provides should be ready to send",
+    "1194": "            # a command. if not, the connection was either returned to the"
+   },
+   "lnum": 1192
+  },
+  {
+   "call": "(self=Connection<host=127.0.0.1,port=13000,db=0>)",
+   "dump": {
+    "e": "undefined",
+    "global ConnectionError": "<class 'redis.exceptions.ConnectionError'>",
+    "self": "Connection<host=127.0.0.1,port=13000,db=0>",
+    "self. _error_message": "<bound method Connection._error_message of Connection<host=127.0.0.1,port=13000,db=0>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py",
+   "func": "connect",
+   "lines": {
+    "561": "            raise TimeoutError(\"Timeout connecting to server\")",
+    "562": "        except socket.error as e:",
+    "563": "            raise ConnectionError(self._error_message(e))",
+    "564": "",
+    "565": "        self._sock = sock"
+   },
+   "lnum": 563
+  }
+ ],
+ "locals": {
+  "self": "Connection<host=127.0.0.1,port=13000,db=0>"
+ },
+ "pyver": "Python 3.10.16: /home/erp-demo-coimbatore/erpnext-demo/env/bin/python (prefix: /home/erp-demo-coimbatore/erpnext-demo/env)",
+ "timestamp": "2025-01-28 09:36:22.893729",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 559, in connect\n    sock = self._connect()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 615, in _connect\n    raise err\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 603, in _connect\n    sock.connect(socket_address)\nConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py\", line 97, in application\n    response = frappe.api.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 48, in handle\n    data = execute_cmd(cmd)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 86, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/doctype/workspace/workspace.py\", line 262, in update_page\n    rename_doc(\"Workspace\", name, new_name, force=True, ignore_permissions=True)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/rename_doc.py\", line 178, in rename_doc\n    update_user_settings(old, new, link_fields)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/rename_doc.py\", line 254, in update_user_settings\n    sync_user_settings()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/utils/user_settings.py\", line 49, in sync_user_settings\n    for key, data in frappe.cache().hgetall(\"_user_settings\").items():\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/redis_wrapper.py\", line 184, in hgetall\n    value = super().hgetall(self.make_key(name))\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py\", line 3014, in hgetall\n    return self.execute_command('HGETALL', name)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/client.py\", line 898, in execute_command\n    conn = self.connection or pool.get_connection(command_name, **options)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 1192, in get_connection\n    connection.connect()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/redis/connection.py\", line 563, in connect\n    raise ConnectionError(self._error_message(e))\nredis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:13000. Connection refused.\n"
+}

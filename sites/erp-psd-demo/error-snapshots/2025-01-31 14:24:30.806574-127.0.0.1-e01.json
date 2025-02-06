@@ -1,0 +1,414 @@
+{
+ "etype": "TypeError",
+ "evalue": "TypeError('Not allowed source type: \"NoneType\".')",
+ "exception": {
+  "args": [
+   40,
+   39,
+   78,
+   111,
+   116,
+   32,
+   97,
+   108,
+   108,
+   111,
+   119,
+   101,
+   100,
+   32,
+   115,
+   111,
+   117,
+   114,
+   99,
+   101,
+   32,
+   116,
+   121,
+   112,
+   101,
+   58,
+   32,
+   34,
+   78,
+   111,
+   110,
+   101,
+   84,
+   121,
+   112,
+   101,
+   34,
+   46,
+   39,
+   44,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   84,
+   121,
+   112,
+   101,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://27.100.38.20:8005/api/method/fr...&are_default_filters=true&_=1738329863909' [GET]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "95": "",
+    "96": "\t\telif request.path.startswith(\"/api/\"):",
+    "97": "\t\t\tresponse = frappe.api.handle()",
+    "98": "",
+    "99": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 97
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/erp-demo-co...tore/erpnext-demo/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.desk.query_report.run'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "46": "",
+    "47": "\tif cmd != \"login\":",
+    "48": "\t\tdata = execute_cmd(cmd)",
+    "49": "",
+    "50": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 48
+  },
+  {
+   "call": "(cmd='frappe.desk.query_report.run', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'report_name': 'Petty Cash Request', 'filters':...': 'true', 'cmd': 'frappe.desk.query_report.run'}",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "method": "<function run>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "84": "\t\tis_valid_http_method(method)",
+    "85": "",
+    "86": "\treturn frappe.call(method, **frappe.form_dict)",
+    "87": "",
+    "88": ""
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(fn=<function run>, *args=(), **kwargs={'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run', 'filters': '{}', 'ignore_prepared_report': 'false', 'report_name': 'Petty Cash Request'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function run>",
+    "newargs": "{'are_default_filters': 'true', 'filters': '{}', 'ignore_prepared_report': 'false', 'report_name': 'Petty Cash Request'}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "(*args=(), **kwargs={'are_default_filters': 'true', 'filters': '{}', 'ignore_prepared_report': 'false', 'report_name': 'Petty Cash Request'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function run>",
+    "global get_newargs": "<function get_newargs>",
+    "kwargs": "{'are_default_filters': 'true', 'filters': '{}', 'ignore_prepared_report': 'false', 'report_name': 'Petty Cash Request'}",
+    "retval": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "wrapper_fn",
+   "lines": {
+    "813": "",
+    "814": "\t\t\ttry:",
+    "815": "\t\t\t\tretval = fn(*args, **get_newargs(fn, kwargs))",
+    "816": "\t\t\tfinally:",
+    "817": "\t\t\t\tif switched_connection and local and hasattr(local, \"primary_db\"):"
+   },
+   "lnum": 815
+  },
+  {
+   "call": "(report_name='Petty Cash Request', filters='{}', user='Administrator', ignore_prepared_report='false', custom_columns=None, is_tree=False, parent_field=None, are_default_filters='true')",
+   "dump": {
+    "custom_columns": "None",
+    "filters": "'{}'",
+    "global generate_report_result": "<function generate_report_result>",
+    "is_tree": "False",
+    "parent_field": "None",
+    "report": "<Report: Petty Cash Request>",
+    "result": "undefined",
+    "user": "'Administrator'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/query_report.py",
+   "func": "run",
+   "lines": {
+    "240": "\t\tresult = get_prepared_report_result(report, filters, dn, user)",
+    "241": "\telse:",
+    "242": "\t\tresult = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)",
+    "243": "\t\tadd_data_to_monitor(report=report.reference_report or report.name)",
+    "244": ""
+   },
+   "lnum": 242
+  },
+  {
+   "call": "(*args=(<Report: Petty Cash Request>, '{}', 'Administrator', None, False, None), **kwargs={})",
+   "dump": {
+    "args": "(<Report: Petty Cash Request>, '{}', 'Administrator', None, False, None)",
+    "fn": "<function generate_report_result>",
+    "global get_newargs": "<function get_newargs>",
+    "kwargs": "{}",
+    "retval": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "wrapper_fn",
+   "lines": {
+    "813": "",
+    "814": "\t\t\ttry:",
+    "815": "\t\t\t\tretval = fn(*args, **get_newargs(fn, kwargs))",
+    "816": "\t\t\tfinally:",
+    "817": "\t\t\t\tif switched_connection and local and hasattr(local, \"primary_db\"):"
+   },
+   "lnum": 815
+  },
+  {
+   "call": "(report=<Report: Petty Cash Request>, filters={}, user='Administrator', custom_columns=None, is_tree=False, parent_field=None)",
+   "dump": {
+    "filters": "{}",
+    "global get_report_result": "<function get_report_result>",
+    "report": "<Report: Petty Cash Request>",
+    "res": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/query_report.py",
+   "func": "generate_report_result",
+   "lines": {
+    "92": "\t\tfilters = json.loads(filters)",
+    "93": "",
+    "94": "\tres = get_report_result(report, filters) or []",
+    "95": "",
+    "96": "\tcolumns, result, message, chart, report_summary, skip_total_row = ljust_list(res, 6)"
+   },
+   "lnum": 94
+  },
+  {
+   "call": "(report=<Report: Petty Cash Request>, filters={})",
+   "dump": {
+    "filters": "{}",
+    "report": "<Report: Petty Cash Request>",
+    "report. execute_script_report": "<bound method Report.execute_script_report of <Report: Petty Cash Request>>",
+    "res": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/query_report.py",
+   "func": "get_report_result",
+   "lines": {
+    "73": "",
+    "74": "\telif report.report_type == \"Script Report\":",
+    "75": "\t\tres = report.execute_script_report(filters)",
+    "76": "",
+    "77": "\telif report.report_type == \"Custom Report\":"
+   },
+   "lnum": 75
+  },
+  {
+   "call": "(self=<Report: Petty Cash Request>, filters={})",
+   "dump": {
+    "filters": "{}",
+    "res": "[]",
+    "self": "<Report: Petty Cash Request>",
+    "self. execute_script": "<bound method Report.execute_script of <Report: Petty Cash Request>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/report/report.py",
+   "func": "execute_script_report",
+   "lines": {
+    "128": "\t\t\tres = self.execute_module(filters)",
+    "129": "\t\telse:",
+    "130": "\t\t\tres = self.execute_script(filters)",
+    "131": "",
+    "132": "\t\t# automatically set as prepared"
+   },
+   "lnum": 130
+  },
+  {
+   "call": "(self=<Report: Petty Cash Request>, filters={})",
+   "dump": {
+    "global safe_exec": "<function safe_exec>",
+    "loc": "{'data': None, 'filters': {}, 'result': None}",
+    "self": "<Report: Petty Cash Request>",
+    "self. report_script": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/report/report.py",
+   "func": "execute_script",
+   "lines": {
+    "148": "\t\t# server script",
+    "149": "\t\tloc = {\"filters\": frappe._dict(filters), \"data\": None, \"result\": None}",
+    "150": "\t\tsafe_exec(self.report_script, None, loc)",
+    "151": "\t\tif loc[\"data\"]:",
+    "152": "\t\t\treturn loc[\"data\"]"
+   },
+   "lnum": 150
+  },
+  {
+   "call": "(script=None, _globals=None, _locals={'data': None, 'filters': {}, 'result': None}, restrict_commit_rollback=False)",
+   "dump": {
+    "filename": "undefined",
+    "global FrappeTransformer": "<class 'frappe.utils.safe_exec.FrappeTransformer'>",
+    "global compile_restricted": "<function compile_restricted>",
+    "policy": "undefined",
+    "script": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/safe_exec.py",
+   "func": "safe_exec",
+   "lines": {
+    "84": "\t\t# execute script compiled by RestrictedPython",
+    "85": "\t\texec(",
+    "86": "\t\t\tcompile_restricted(script, filename=\"<serverscript>\", policy=FrappeTransformer),",
+    "87": "\t\t\texec_globals,",
+    "88": "\t\t\t_locals,"
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(source=None, filename='<serverscript>', mode='exec', flags=0, dont_inherit=False, policy=<class 'frappe.utils.safe_exec.FrappeTransformer'>)",
+   "dump": {
+    "dont_inherit": "False",
+    "filename": "'<serverscript>'",
+    "flags": "0",
+    "global _compile_restricted_mode": "<function _compile_restricted_mode>",
+    "mode": "'exec'",
+    "policy": "<class 'frappe.utils.safe_exec.FrappeTransformer'>",
+    "result": "undefined",
+    "source": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/RestrictedPython/compile.py",
+   "func": "compile_restricted",
+   "lines": {
+    "194": "    \"\"\"",
+    "195": "    if mode in ['exec', 'eval', 'single', 'function']:",
+    "196": "        result = _compile_restricted_mode(",
+    "197": "            source,",
+    "198": "            filename=filename,"
+   },
+   "lnum": 196
+  },
+  {
+   "call": "(source=None, filename='<serverscript>', mode='exec', flags=0, dont_inherit=False, policy=<class 'frappe.utils.safe_exec.FrappeTransformer'>)",
+   "dump": {
+    "'\"{0.__class__.__name__}\".'.format": "undefined",
+    "builtin TypeError": "<class 'TypeError'>",
+    "source": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/RestrictedPython/compile.py",
+   "func": "_compile_restricted_mode",
+   "lines": {
+    "42": "        allowed_source_types = [str, ast.Module]",
+    "43": "        if not issubclass(type(source), tuple(allowed_source_types)):",
+    "44": "            raise TypeError('Not allowed source type: '",
+    "45": "                            '\"{0.__class__.__name__}\".'.format(source))",
+    "46": "        c_ast = None"
+   },
+   "lnum": 44
+  }
+ ],
+ "locals": {
+  "allowed_source_types": "[<class 'str'>, <class 'ast.Module'>]",
+  "byte_code": "None",
+  "c_ast": "None",
+  "collected_errors": "[]",
+  "collected_warnings": "[]",
+  "dont_inherit": "False",
+  "filename": "<serverscript>",
+  "flags": "0",
+  "mode": "exec",
+  "policy": "<class 'frappe.utils.safe_exec.FrappeTransformer'>",
+  "source": "None",
+  "used_names": "{}"
+ },
+ "pyver": "Python 3.10.16: /home/erp-demo-coimbatore/erpnext-demo/env/bin/python (prefix: /home/erp-demo-coimbatore/erpnext-demo/env)",
+ "timestamp": "2025-01-31 14:24:30.806616",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py\", line 97, in application\n    response = frappe.api.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 48, in handle\n    data = execute_cmd(cmd)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 86, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 815, in wrapper_fn\n    retval = fn(*args, **get_newargs(fn, kwargs))\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/query_report.py\", line 242, in run\n    result = generate_report_result(report, filters, user, custom_columns, is_tree, parent_field)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 815, in wrapper_fn\n    retval = fn(*args, **get_newargs(fn, kwargs))\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/query_report.py\", line 94, in generate_report_result\n    res = get_report_result(report, filters) or []\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/desk/query_report.py\", line 75, in get_report_result\n    res = report.execute_script_report(filters)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/report/report.py\", line 130, in execute_script_report\n    res = self.execute_script(filters)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/core/doctype/report/report.py\", line 150, in execute_script\n    safe_exec(self.report_script, None, loc)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/utils/safe_exec.py\", line 86, in safe_exec\n    compile_restricted(script, filename=\"<serverscript>\", policy=FrappeTransformer),\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/RestrictedPython/compile.py\", line 196, in compile_restricted\n    result = _compile_restricted_mode(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/env/lib/python3.10/site-packages/RestrictedPython/compile.py\", line 44, in _compile_restricted_mode\n    raise TypeError('Not allowed source type: '\nTypeError: Not allowed source type: \"NoneType\".\n"
+}
