@@ -1,0 +1,619 @@
+{
+ "etype": "OutgoingEmailError",
+ "evalue": "OutgoingEmailError('Please setup default Email Account from Setup > Email > Email Account')",
+ "exception": {
+  "args": [
+   40,
+   39,
+   80,
+   108,
+   101,
+   97,
+   115,
+   101,
+   32,
+   115,
+   101,
+   116,
+   117,
+   112,
+   32,
+   100,
+   101,
+   102,
+   97,
+   117,
+   108,
+   116,
+   32,
+   69,
+   109,
+   97,
+   105,
+   108,
+   32,
+   65,
+   99,
+   99,
+   111,
+   117,
+   110,
+   116,
+   32,
+   102,
+   114,
+   111,
+   109,
+   32,
+   83,
+   101,
+   116,
+   117,
+   112,
+   32,
+   62,
+   32,
+   69,
+   109,
+   97,
+   105,
+   108,
+   32,
+   62,
+   32,
+   69,
+   109,
+   97,
+   105,
+   108,
+   32,
+   65,
+   99,
+   99,
+   111,
+   117,
+   110,
+   116,
+   39,
+   44,
+   41
+  ],
+  "http_status_code": [
+   53,
+   48,
+   49
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   79,
+   117,
+   116,
+   103,
+   111,
+   105,
+   110,
+   103,
+   69,
+   109,
+   97,
+   105,
+   108,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://27.100.38.20:8005/api/method/frappe.client.save' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "95": "",
+    "96": "\t\telif request.path.startswith(\"/api/\"):",
+    "97": "\t\t\tresponse = frappe.api.handle()",
+    "98": "",
+    "99": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 97
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/erp-demo-co...tore/erpnext-demo/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.client.save'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "46": "",
+    "47": "\tif cmd != \"login\":",
+    "48": "\t\tdata = execute_cmd(cmd)",
+    "49": "",
+    "50": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 48
+  },
+  {
+   "call": "(cmd='frappe.client.save', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'doc': '{\"docstatus\":0,\"doctype\":\"Appointment\",...l.arun@gmail.com\"}', 'cmd': 'frappe.client.save'}",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "method": "<function save>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "84": "\t\tis_valid_http_method(method)",
+    "85": "",
+    "86": "\treturn frappe.call(method, **frappe.form_dict)",
+    "87": "",
+    "88": ""
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(fn=<function save>, *args=(), **kwargs={'cmd': 'frappe.client.save', 'doc': '{\"docstatus\":0,\"doctype\":\"Appointment\",\"name\":\"n...nkumar\",\"customer_email\":\"tamill.arun@gmail.com\"}'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function save>",
+    "newargs": "{'doc': '{\"docstatus\":0,\"doctype\":\"Appointment\",\"name\":\"n...nkumar\",\"customer_email\":\"tamill.arun@gmail.com\"}'}"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "(doc=<Appointment: APMT-Arunkumar-0072>)",
+   "dump": {
+    "doc": "<Appointment: APMT-Arunkumar-0072>",
+    "doc. save": "<bound method Document.save of <Appointment: APMT-Arunkumar-0072>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/client.py",
+   "func": "save",
+   "lines": {
+    "230": "",
+    "231": "\tdoc = frappe.get_doc(doc)",
+    "232": "\tdoc.save()",
+    "233": "",
+    "234": "\treturn doc.as_dict()"
+   },
+   "lnum": 232
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "self": "<Appointment: APMT-Arunkumar-0072>",
+    "self. _save": "<bound method Document._save of <Appointment: APMT-Arunkumar-0072>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "save",
+   "lines": {
+    "308": "\tdef save(self, *args, **kwargs):",
+    "309": "\t\t\"\"\"Wrapper for _save\"\"\"",
+    "310": "\t\treturn self._save(*args, **kwargs)",
+    "311": "",
+    "312": "\tdef _save(self, ignore_permissions=None, ignore_version=None) -> \"Document\":"
+   },
+   "lnum": 310
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>, ignore_permissions=None, ignore_version=None)",
+   "dump": {
+    "self": "<Appointment: APMT-Arunkumar-0072>",
+    "self. insert": "<bound method Document.insert of <Appointment: APMT-Arunkumar-0072>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "_save",
+   "lines": {
+    "330": "",
+    "331": "\t\tif self.get(\"__islocal\") or not self.get(\"name\"):",
+    "332": "\t\t\treturn self.insert()",
+    "333": "",
+    "334": "\t\tself._set_defaults()"
+   },
+   "lnum": 332
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>, ignore_permissions=None, ignore_links=None, ignore_if_duplicate=False, ignore_mandatory=None, set_name=None, set_child_names=True)",
+   "dump": {
+    "self": "<Appointment: APMT-Arunkumar-0072>",
+    "self. run_method": "<bound method Document.run_method of <Appointment: APMT-Arunkumar-0072>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "insert",
+   "lines": {
+    "280": "\t\t\td.db_insert()",
+    "281": "",
+    "282": "\t\tself.run_method(\"after_insert\")",
+    "283": "\t\tself.flags.in_insert = True",
+    "284": ""
+   },
+   "lnum": 282
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>, method='after_insert', *args=(), **kwargs={})",
+   "dump": {
+    "Document. hook": "<function Document.hook>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "global Document": "<class 'frappe.model.document.Document'>",
+    "kwargs": "{}",
+    "out": "undefined",
+    "self": "<Appointment: APMT-Arunkumar-0072>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "run_method",
+   "lines": {
+    "929": "",
+    "930": "\t\tfn.__name__ = str(method)",
+    "931": "\t\tout = Document.hook(fn)(self, *args, **kwargs)",
+    "932": "",
+    "933": "\t\tself.run_notifications(method)"
+   },
+   "lnum": 931
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "composed": "<function Document.hook.<locals>.compose.<locals>.runner>",
+    "kwargs": "{}",
+    "method": "'after_insert'",
+    "self": "<Appointment: APMT-Arunkumar-0072>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "composer",
+   "lines": {
+    "1281": "",
+    "1282": "\t\t\tcomposed = compose(f, *hooks)",
+    "1283": "\t\t\treturn composed(self, method, *args, **kwargs)",
+    "1284": "",
+    "1285": "\t\treturn composer"
+   },
+   "lnum": 1283
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>, method='after_insert', *args=(), **kwargs={})",
+   "dump": {
+    "add_to_return_value": "<function Document.hook.<locals>.add_to_return_value>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "kwargs": "{}",
+    "self": "<Appointment: APMT-Arunkumar-0072>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "runner",
+   "lines": {
+    "1263": "\t\tdef compose(fn, *hooks):",
+    "1264": "\t\t\tdef runner(self, method, *args, **kwargs):",
+    "1265": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))",
+    "1266": "\t\t\t\tfor f in hooks:",
+    "1267": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   },
+   "lnum": 1265
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "method_object": "<bound method Appointment.after_insert of <Appointment: APMT-Arunkumar-0072>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py",
+   "func": "fn",
+   "lines": {
+    "926": "\t\t\t# If method found in __dict__, expect it to be callable",
+    "927": "\t\t\tif method in self.__dict__ or callable(method_object):",
+    "928": "\t\t\t\treturn method_object(*args, **kwargs)",
+    "929": "",
+    "930": "\t\tfn.__name__ = str(method)"
+   },
+   "lnum": 928
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>)",
+   "dump": {
+    "self": "<Appointment: APMT-Arunkumar-0072>",
+    "self. send_confirmation_email": "<bound method Appointment.send_confirmation_email of <Appointment: APMT-Arunkumar-0072>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/erpnext/erpnext/crm/doctype/appointment/appointment.py",
+   "func": "after_insert",
+   "lines": {
+    "59": "\t\t\tself.status = \"Unverified\"",
+    "60": "\t\t\t# Send email to confirm",
+    "61": "\t\t\tself.send_confirmation_email()",
+    "62": "",
+    "63": "\tdef send_confirmation_email(self):"
+   },
+   "lnum": 61
+  },
+  {
+   "call": "(self=<Appointment: APMT-Arunkumar-0072>)",
+   "dump": {
+    "args": "{'full_name': 'Arunkumar', 'link': 'http://27.100.38.20:8005/book_appointment/verify...49cc2ef93968157f2e55f327196b366c4e9dcab724c0befe6', 'site_url': 'http://27.100.38.20:8005'}",
+    "frappe. sendmail": "<function sendmail>",
+    "global _": "<function _>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>",
+    "recipients": "undefined",
+    "self": "<Appointment: APMT-Arunkumar-0072>",
+    "self. customer_email": "'tamill.arun@gmail.com'",
+    "subject": "undefined",
+    "template": "'confirm_appointment'"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/erpnext/erpnext/crm/doctype/appointment/appointment.py",
+   "func": "send_confirmation_email",
+   "lines": {
+    "69": "\t\t\t\"full_name\": self.customer_name,",
+    "70": "\t\t}",
+    "71": "\t\tfrappe.sendmail(",
+    "72": "\t\t\trecipients=[self.customer_email],",
+    "73": "\t\t\ttemplate=template,"
+   },
+   "lnum": 71
+  },
+  {
+   "call": "(recipients=['tamill.arun@gmail.com'], sender='', subject='Appointment Confirmation', message='<p>Dear Arunkumar,</p>\\n<p>A new appointment has ...3968157f2e55f327196b366c4e9dcab724c0befe6</a></p>', as_markdown=False, delayed=True, reference_doctype=None, reference_name=None, unsubscribe_method=None, unsubscribe_params=None, unsubscribe_message=None, add_unsubscribe_link=1, attachments=None, content=None, doctype=None, name=None, reply_to=None, queue_separately=False, cc=[], bcc=[], message_id=None, in_reply_to=None, send_after=None, expose_recipients=None, send_priority=1, communication=None, retry=1, now=None, read_receipt=None, is_notification=False, inline_images=None, template='confirm_appointment', args={'full_name': 'Arunkumar', 'link': 'http://27.100.38.20:8005/book_appointment/verify...49cc2ef93968157f2e55f327196b366c4e9dcab724c0befe6', 'site_url': 'http://27.100.38.20:8005'}, header=None, print_letterhead=False, with_container=False)",
+   "dump": {
+    "builder": "<frappe.email.doctype.email_queue.email_queue.QueueBuilder object>",
+    "builder. process": "<bound method QueueBuilder.process of <frappe.em...ype.email_queue.email_queue.QueueBuilder object>>",
+    "now": "None",
+    "send_now": "undefined"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "sendmail",
+   "lines": {
+    "733": "",
+    "734": "\t# build email queue and send the email if send_now is True.",
+    "735": "\tbuilder.process(send_now=now)",
+    "736": "",
+    "737": ""
+   },
+   "lnum": 735
+  },
+  {
+   "call": "(self=<frappe.email.doctype.email_queue.email_queue.QueueBuilder object>, send_now=None)",
+   "dump": {
+    "include_recipients": "undefined",
+    "queue_data": "undefined",
+    "self": "<frappe.email.doctype.email_queue.email_queue.QueueBuilder object>",
+    "self. as_dict": "<bound method QueueBuilder.as_dict of <frappe.em...ype.email_queue.email_queue.QueueBuilder object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_queue/email_queue.py",
+   "func": "process",
+   "lines": {
+    "683": "\t\t\treturn []",
+    "684": "",
+    "685": "\t\tqueue_data = self.as_dict(include_recipients=False)",
+    "686": "\t\tif not queue_data:",
+    "687": "\t\t\treturn []"
+   },
+   "lnum": 685
+  },
+  {
+   "call": "(self=<frappe.email.doctype.email_queue.email_queue.QueueBuilder object>, include_recipients=False)",
+   "dump": {
+    "email_account": "undefined",
+    "self": "<frappe.email.doctype.email_queue.email_queue.QueueBuilder object>",
+    "self. get_outgoing_email_account": "<bound method QueueBuilder.get_outgoing_email_ac...ype.email_queue.email_queue.QueueBuilder object>>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_queue/email_queue.py",
+   "func": "as_dict",
+   "lines": {
+    "724": "",
+    "725": "\tdef as_dict(self, include_recipients=True):",
+    "726": "\t\temail_account = self.get_outgoing_email_account()",
+    "727": "\t\temail_account_name = email_account and email_account.is_exists_in_db() and email_account.name",
+    "728": ""
+   },
+   "lnum": 726
+  },
+  {
+   "call": "(self=<frappe.email.doctype.email_queue.email_queue.QueueBuilder object>)",
+   "dump": {
+    "EmailAccount. find_outgoing": "<bound method EmailAccount.find_outgoing of <cla...ctype.email_account.email_account.EmailAccount'>>",
+    "_raise_error": "undefined",
+    "global EmailAccount": "<class 'frappe.email.doctype.email_account.email_account.EmailAccount'>",
+    "match_by_doctype": "undefined",
+    "match_by_email": "undefined",
+    "self": "<frappe.email.doctype.email_queue.email_queue.QueueBuilder object>",
+    "self. _email_account": "None",
+    "self. _sender": "''",
+    "self. reference_doctype": "None"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_queue/email_queue.py",
+   "func": "get_outgoing_email_account",
+   "lines": {
+    "592": "\t\t\treturn self._email_account",
+    "593": "",
+    "594": "\t\tself._email_account = EmailAccount.find_outgoing(",
+    "595": "\t\t\tmatch_by_doctype=self.reference_doctype, match_by_email=self._sender, _raise_error=True",
+    "596": "\t\t)"
+   },
+   "lnum": 594
+  },
+  {
+   "call": "(*args=(<class 'frappe.email.doctype.email_account.email_account.EmailAccount'>,), **kwargs={'_raise_error': True, 'match_by_doctype': None, 'match_by_email': ''})",
+   "dump": {
+    "args": "(<class 'frappe.email.doctype.email_account.email_account.EmailAccount'>,)",
+    "func": "<function EmailAccount.find_outgoing>",
+    "kwargs": "{'_raise_error': True, 'match_by_doctype': None, 'match_by_email': ''}",
+    "matched_accounts": "[]"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_account/email_account.py",
+   "func": "wrapper_cache_email_account",
+   "lines": {
+    "41": "\t\t\t\treturn matched_accounts[0]",
+    "42": "",
+    "43": "\t\t\tmatched_accounts = func(*args, **kwargs)",
+    "44": "\t\t\tcached_accounts.update(matched_accounts or {})",
+    "45": "\t\t\treturn matched_accounts and next(iter(matched_accounts.values()))"
+   },
+   "lnum": 43
+  },
+  {
+   "call": "(cls=<class 'frappe.email.doctype.email_account.email_account.EmailAccount'>, match_by_email='', match_by_doctype=None, _raise_error=True)",
+   "dump": {
+    "frappe. OutgoingEmailError": "<class 'frappe.exceptions.OutgoingEmailError'>",
+    "frappe. throw": "<function throw>",
+    "global _": "<function _>",
+    "global frappe": "<module 'frappe' from '/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_account/email_account.py",
+   "func": "find_outgoing",
+   "lines": {
+    "321": "",
+    "322": "\t\tif _raise_error:",
+    "323": "\t\t\tfrappe.throw(",
+    "324": "\t\t\t\t_(\"Please setup default Email Account from Setup > Email > Email Account\"),",
+    "325": "\t\t\t\tfrappe.OutgoingEmailError,"
+   },
+   "lnum": 323
+  },
+  {
+   "call": "(msg='Please setup default Email Account from Setup > Email > Email Account', exc=<class 'frappe.exceptions.OutgoingEmailError'>, title=None, is_minimizable=False, wide=False, as_list=False, primary_action=None)",
+   "dump": {
+    "as_list": "False",
+    "exc": "<class 'frappe.exceptions.OutgoingEmailError'>",
+    "global msgprint": "<function msgprint>",
+    "indicator": "undefined",
+    "is_minimizable": "False",
+    "msg": "'Please setup default Email Account from Setup > Email > Email Account'",
+    "primary_action": "None",
+    "raise_exception": "undefined",
+    "title": "None",
+    "wide": "False"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "throw",
+   "lines": {
+    "546": "\t:param primary_action: [optional] Bind a primary server/client side action.",
+    "547": "\t\"\"\"",
+    "548": "\tmsgprint(",
+    "549": "\t\tmsg,",
+    "550": "\t\traise_exception=exc,"
+   },
+   "lnum": 548
+  },
+  {
+   "call": "(msg='Please setup default Email Account from Setup > Email > Email Account', title=None, raise_exception=<class 'frappe.exceptions.OutgoingEmailError'>, as_table=False, as_list=False, indicator='red', alert=False, primary_action=None, is_minimizable=False, wide=False, realtime=False)",
+   "dump": {
+    "_raise_exception": "<function msgprint.<locals>._raise_exception>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "msgprint",
+   "lines": {
+    "507": "\t\tlocal.response[\"exc_type\"] = raise_exception.__name__",
+    "508": "",
+    "509": "\t_raise_exception()",
+    "510": "",
+    "511": ""
+   },
+   "lnum": 509
+  },
+  {
+   "call": "()",
+   "dump": {
+    "msg": "'Please setup default Email Account from Setup > Email > Email Account'",
+    "raise_exception": "<class 'frappe.exceptions.OutgoingEmailError'>"
+   },
+   "file": "/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py",
+   "func": "_raise_exception",
+   "lines": {
+    "453": "\t\tif raise_exception:",
+    "454": "\t\t\tif inspect.isclass(raise_exception) and issubclass(raise_exception, Exception):",
+    "455": "\t\t\t\traise raise_exception(msg)",
+    "456": "\t\t\telse:",
+    "457": "\t\t\t\traise ValidationError(msg)"
+   },
+   "lnum": 455
+  }
+ ],
+ "locals": {
+  "inspect": "<module 'inspect' from '/usr/lib/python3.10/inspect.py'>",
+  "msg": "Please setup default Email Account from Setup > Email > Email Account",
+  "raise_exception": "<class 'frappe.exceptions.OutgoingEmailError'>"
+ },
+ "pyver": "Python 3.10.16: /home/erp-demo-coimbatore/erpnext-demo/env/bin/python (prefix: /home/erp-demo-coimbatore/erpnext-demo/env)",
+ "timestamp": "2025-02-06 13:04:37.344639",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/app.py\", line 97, in application\n    response = frappe.api.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 48, in handle\n    data = execute_cmd(cmd)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/handler.py\", line 86, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/client.py\", line 232, in save\n    doc.save()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 310, in save\n    return self._save(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 332, in _save\n    return self.insert()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 282, in insert\n    self.run_method(\"after_insert\")\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 931, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1283, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 1265, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/model/document.py\", line 928, in fn\n    return method_object(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/erpnext/erpnext/crm/doctype/appointment/appointment.py\", line 61, in after_insert\n    self.send_confirmation_email()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/erpnext/erpnext/crm/doctype/appointment/appointment.py\", line 71, in send_confirmation_email\n    frappe.sendmail(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 735, in sendmail\n    builder.process(send_now=now)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_queue/email_queue.py\", line 685, in process\n    queue_data = self.as_dict(include_recipients=False)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_queue/email_queue.py\", line 726, in as_dict\n    email_account = self.get_outgoing_email_account()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_queue/email_queue.py\", line 594, in get_outgoing_email_account\n    self._email_account = EmailAccount.find_outgoing(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_account/email_account.py\", line 43, in wrapper_cache_email_account\n    matched_accounts = func(*args, **kwargs)\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/email/doctype/email_account/email_account.py\", line 323, in find_outgoing\n    frappe.throw(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 548, in throw\n    msgprint(\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 509, in msgprint\n    _raise_exception()\n  File \"/home/erp-demo-coimbatore/erpnext-demo/apps/frappe/frappe/__init__.py\", line 455, in _raise_exception\n    raise raise_exception(msg)\nfrappe.exceptions.OutgoingEmailError: Please setup default Email Account from Setup > Email > Email Account\n"
+}

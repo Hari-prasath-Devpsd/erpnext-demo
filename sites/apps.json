@@ -17,5 +17,15 @@
         "required": [],
         "idx": 2,
         "version": "14.78.9"
+    },
+    "rohit_consultant": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "f355e0b00cf6bed2fb61708a81a109249fd7706f",
+            "branch": "master"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
     }
 }
