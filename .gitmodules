@@ -1,0 +1,3 @@
+[submodule "apps/rohit_consultant"]
+	path = apps/rohit_consultant
+	url = https://github.com/Hari-prasath-Devpsd/Rohit-Consultant.git
